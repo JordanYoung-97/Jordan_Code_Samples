@@ -1,0 +1,523 @@
+<style>
+{% if section.settings.display-timer %}
+  Body {
+    height: 100vh;
+    overflow: hidden;
+  }
+  {% endif %}
+
+  .m-specs {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50vh;
+  background-color: {{section.settings.full-color-01}};
+  min-height: 450px;
+  color: #F9AA59 !important;
+}
+
+.m-buy {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 85vh;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: {{section.settings.full-color-02}};
+}
+
+.s-right-container {
+  width: 100%;
+  height: 100%;
+  max-height: 250px;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-image: url('{{section.settings.icon-image | img_url: '500x500'}}');
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+</style>
+
+{% if section.settings.display-timer %}
+<div class="_100vh">
+    <div class="svg-adv">
+      <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 185.55 30.46"><path d="M4.31,25.08c-.74,1-1.21,2.59-1.94,3.73S0,31.6,0,29.32c0-1.43,2.13-4,2.83-5.23,1-1.81,2-3.63,3.06-5.42-.62-.08-2.91.68-2.93-.48,0-.6,3.49-1.39,4-1.72,1.81-1.3,2.82-3.78,4.05-5.58,1.38-2,2.87-4,4.42-5.88C16.61,3.52,23-3.55,23.27,2.25c.1,1.86-1,4-1.47,5.75a27,27,0,0,1-1.58,4.59c1.61.11,3.32-.66,4.87.06-.23,1.08-2.85.82-3.6.93-1.63.26-1.9,1.14-2.38,2-.25.45-.85,2.67-.81,1.7-.06,0-.14,1.46-.21,1.79a13.39,13.39,0,0,1-.77,2c-1,2.52-1.57,6.22-3.62,8.17,0-.21.06-.41.1-.62-.21.78,0-.32,0-.32-.37,0-.15.53-.4.68-1.28-1.13,1.83-7.24,2.32-8.53.41-1.1,3-5.53,1.52-6-1-.32-4,1.35-5,1.73a25.93,25.93,0,0,0-2.5,1.05,3.37,3.37,0,0,0-.78.45c-.32.28,0,.25,0,.06C8.41,17.5,5.28,24.46,4.31,25.08Zm.53-1a.07.07,0,0,0,0,.06A.14.14,0,0,0,4.84,24.09ZM6.37,22c0,.32-.4.38-.46.7C5.8,22.49,6.25,22.17,6.37,22Zm.72-1.35c.1.17-.13.45-.28.51C6.84,21,7,20.83,7.09,20.67ZM11.41,14a1.79,1.79,0,0,0-.89,1.17l.29-.23c-.37,1,.92,0,1.61-.21,1-.3,1.93-.62,2.91-.86,1.8-.45,2.82-.34,3.56-2.16a42.8,42.8,0,0,0,1.64-5.07c.21-.78,1.35-4.2.64-4.92-.17.49-.46.37-.75.57s-1.53,1.05-.57.75A35.47,35.47,0,0,0,16,7.61c-.45.55-.91,1.17-1.35,1.82-.11.16-.33.36-.53.6-.5.58-.39,1.41-.45.43C13.22,11.26,12.23,13.56,11.41,14Zm1.34-2.06s.06,0,.05-.09A.14.14,0,0,0,12.75,11.91Zm6.33,2.82s0,0,0-.06S19.1,14.71,19.08,14.73ZM22,7.5v0Z" style="fill:#0E1839"></path><path d="M33.81,14.93l-.5.58c.92-.33-.84,1.14-.88,1.26a.74.74,0,0,1,.21,0,10.7,10.7,0,0,1-1,2.29c.06-.34-.42.83-.55,1.09.79-.54.17-.24,0,.31a2.67,2.67,0,0,0-.27,1.13c-.43-.38.1-.15-.29.29.48,0,.07-.4.11.31-.41-.52.19,2.25.22,2.71-3.14,1.08-.74-6.29-.45-7-1.68,1.55-3,3.51-4.91,4.8-1,.66-1.83,1.09-3,.56-.43-.2-1.55-.93-1.13-1.55-.15-.06,1-1.7.82-1.59a1.63,1.63,0,0,1,.51-.75.59.59,0,0,1-.23.33c-.39-.36,4.65-4.94,4.66-5.06s1.6-1.47,2.21-1.5,2.27,1.33,2.09,1.62c1.71-2.79,3.27-5.62,4.9-8.46.53-.92,2.82-5.25,3.06-1.9.08,1.13-1.23,2.6-1.76,3.51-.8,1.36-1.66,2.68-2.44,4a19.36,19.36,0,0,1-1.27,2.45Zm-12,6.34c.21,0,.18-.25.22-.48C21.83,20.8,21.78,21.29,21.78,21.27Zm8.42-5.42c1-2.52-1.21-1.15-2.17-.22A25,25,0,0,0,23.22,22c1.7-.61,3.24-2.43,4.47-3.69C28.26,17.75,29.4,15.9,30.2,15.85Zm2.69.31a1.63,1.63,0,0,0,.35-.39C33,15.87,32.91,15.91,32.89,16.16Zm1-1.33-.08.1A.09.09,0,0,1,33.89,14.83Zm.18-1.28,0,.4C34.37,13.56,34.36,13.43,34.07,13.55Z" style="fill:#0E1839"></path><path d="M42.56,16.71c-1.1,1.37-4.42,6.77-6.6,6.15-1.7-.49-.83-3.05-.46-4.23s1.54-5.43,3-5.07-.33,2.49-.62,3a38.34,38.34,0,0,0-1.65,4.65c2.75-1.51,4.18-4.35,6-6.77.37-.49,1.25-2.05,2.11-1.29S42.87,16.25,42.56,16.71Z" style="fill:#0E1839"></path><path d="M57.34,14.67c-.11.32.14.7,0,1.05s-.79.82-1.08,1.08a27.71,27.71,0,0,1-3.56,2.63c-2,1.28-4.53,3.07-7,3-5.9-.28,1.3-11,4.83-10.36,3.14.6-.28,4.48-1.21,5.37a6.28,6.28,0,0,1-3.07,1.79c-.66.19-1.41-.14-1.4,1.09C44.88,23.85,56,14.75,57.34,14.67ZM46.78,16.86c.13.23-.9.91-.58,1.05.88.37,3.79-2.49,3.83-3.18C50.16,12.88,47.22,16.23,46.78,16.86Z" style="fill:#0E1839"></path><path d="M70.13,15.53c.5-.42.23.63.2.79-.15.81-1.16,1.65-1.71,2.2-1,1-2.52,2.57-4.1,2.21-2.44-.55-1.95-4.32-1.89-6.16-1.22.33-7.76,7.91-8,7.73C53.38,21.2,57,15,57.57,13.86c.29-.59,1.22-2.72,2-1.51.65,1-1.52,4-2,4.72,2.19-2.35,6.35-6.74,6.44-.78C64.07,21.84,68.17,17.57,70.13,15.53Zm-5.27,5.33c.29,0-.3-.05-.32,0C64.7,20.78,64.7,20.87,64.86,20.86Z" style="fill:#0E1839"></path><path d="M82.21,12.93c-.12,1.85-2.27,3.57-3.45,4.6C77.09,19,75.33,20.79,73,21.3c-2,.45-3.93-.39-4-2.67-.12-2.68,2.15-5.37,3.35-7.6-.45.07-3.29.79-3.41.06s2.21-.95,2.73-1.09c2.41-.64,2.92-2.27,4-4.28.55-1,1.83-3.8,3.28-3.73s.31,1.63-.06,2.2c-1,1.58-2,3.21-3,4.77,1.35-.11,2.65-.66,4-.6-.64,1.92-4.44,1.34-5.9,3a16.57,16.57,0,0,0-2.54,4.79c-.26.69-1.27,3.32-.86,3.88,1.91,2.62,10.14-6.09,10.93-7.12a.47.47,0,0,1,0,.31l.35-.42a1.4,1.4,0,0,0-.26.88c.08-.25.17-.5.27-.74q0,.29.24-.09a1.76,1.76,0,0,1-.37.78A1.75,1.75,0,0,1,82.21,12.93Zm-2,3.43,0,.07A.13.13,0,0,1,80.25,16.36Zm1.56-2.44c0,.1,0,.15-.06.16A.2.2,0,0,1,81.81,13.92Zm0-.28,0-.13A.51.51,0,0,1,81.79,13.64Z" style="fill:#0E1839"></path><path d="M91,17.84a37.91,37.91,0,0,1-3.28,2c-2.2.51-3.35-1.21-2.49-3.2-1.46,1.17-3.31,4.92-5.76,3.83-2.64-1.18.47-5.32,1.35-6.76.38-.61,1-2,1.78-2.17,1.94-.32.53,1.49.13,2.09-.28.4-3.68,5.17-3,5.83.52.48,4.58-4.05,4.81-4.3.59-.65,2.16-3.44,2.94-3.64,1.79-.47,1,1.92.59,2.61-.6,1.06-3.63,4.87-.65,4.56,2.64-.28,5.52-4.56,7.37-6.18-.3.87-.23,1.11.2.73C94.7,14.09,92.4,17.76,91,17.84Zm-8.8,1.6c.17,0,.25-.11.27-.23A.89.89,0,0,0,82.22,19.44Zm.62-.62a1.2,1.2,0,0,0,.53-.47C83.17,18.53,83,18.58,82.84,18.82Zm.56-.5a3.57,3.57,0,0,0,.87-.95A4.62,4.62,0,0,0,83.4,18.32Zm1.11-1.12a.65.65,0,0,0,.11-.22C84.49,17,84.45,17.09,84.51,17.2Zm2.75-1.74s-.06.07-.06.1S87.26,15.48,87.26,15.46Z" style="fill:#0E1839"></path><path d="M97.8,13c-3.23,1.5-5.47-1-3-3.77.73-.83,1.46-1.23,1.72,0,.17.87-.94,2.15-1.32,2.88,1.28-.07,3.64-2.44,4.45-.34.74,1.92-2.48,3.88-2.91,5.53-.61,2.28,1.81.83,3,.11s4.16-4,5.57-3.75c0,.27.16.68.11.86-.23.92-2.35,2.15-3.14,2.69-1.42,1-4.06,3.45-6,2.62C93.64,18.71,96.77,14.39,97.8,13Z" style="fill:#0E1839"></path><path d="M117.19,11.17c-.12.33.14.7,0,1.05s-.77.8-1,1a26.55,26.55,0,0,1-3.37,2.51c-2,1.31-4.81,3.34-7.34,3.11-5.76-.52,1.11-8.89,3.48-10,3.14-1.41,2.82,2.06,1.39,3.78-.78.94-2.08,2.43-3.28,2.8-.89.26-1.52-.32-2.11.47-.84,1.13.06,1.78,1.09,1.71,1.25-.08,2.94-1.25,4-1.85,1.29-.73,2.54-1.55,3.78-2.38C114.5,13,116.29,11.22,117.19,11.17Zm-10.57,2.2c.13.22-.89.92-.57,1,.89.35,3.88-2.53,3.86-3.25C109.85,9.48,107.06,12.72,106.62,13.37Z" style="fill:#0E1839"></path><path d="M127.15,29.81a5.85,5.85,0,0,0-2,.39c-.2.05-4.15,0-3.36-.86a19.58,19.58,0,0,1,2,0A13.32,13.32,0,0,0,127.37,28c1.71-.8,4.1-1.88,5.19-3.53,2.41-3.64-3.95-6.61-5.68-9.07C121.66,8,138.41-2.14,140.21,1.56c0,.32.64,1.17.68,1.64.06.75-.35,2.68-1.12,3-1.13.47-.91-1.33-.93-1.74-.51.17.27-1.73.25-2.09-3.41,0-7.33,3.9-9.31,6.37-2.34,2.92-2.7,5.81.17,8.42,2.24,2,6,4.54,4.27,8.1C133,27.69,129.49,28.85,127.15,29.81Zm1.51-.68c.08,0,.25-.15.21-.24S128.66,29.11,128.66,29.13Z" style="fill:#0E1839"></path><path d="M150.46,16.08c-.11.34.15.7,0,1.06s-.77.79-1,1.05a27.44,27.44,0,0,1-3.36,2.51c-2,1.32-5.14,3.58-7.72,3.08-5.29-1,1.83-9.31,4.19-10.07,3.32-1.06,2.09,2.81.75,4.27a10,10,0,0,1-2.81,2.43c-1.08.4-1.81-.37-2.38.79-1.47,3,4.43,0,5.07-.38,1.34-.75,2.61-1.59,3.88-2.44C147.76,17.91,149.56,16.13,150.46,16.08Zm-10.56,2.2c.13.23-.9.91-.58,1,.87.37,3.78-2.49,3.83-3.17C143.28,14.3,140.33,17.64,139.9,18.28Z" style="fill:#0E1839"></path><path d="M153.18,16.6c-3.23,1.54-5.46-1-3-3.77.73-.82,1.46-1.23,1.72.05.17.87-.94,2.15-1.32,2.88,1.28-.07,3.64-2.44,4.45-.34.74,1.92-2.47,3.88-2.91,5.53-.6,2.28,1.81.83,3,.11s4.16-4,5.57-3.75c0,.28.16.68.11.86-.23.92-2.34,2.15-3.14,2.69-1.42,1-4.06,3.45-6,2.62C149,22.33,152.16,18,153.18,16.6Z" style="fill:#0E1839"></path><path d="M170.77,14.27c-.44,2.72-6.18,6.78-8.58,7.55-4.68,1.49-2.94-3.68-1.93-6,.12.94.38-.88.82-1.19.75-.55,1.32-.76,1.49.37.12.78-.89,2-1.18,2.68a12.21,12.21,0,0,0-.8,3.2c1.89-.2,4.45-2.28,5.88-3.46.8-.66,1.46-1.48,2.27-2.12.2-.16,2.28-1.22,1.62-.66Zm-11,3.28c0-.23.6-.66.31-1C160.07,16.71,159.53,17.43,159.81,17.55Zm.1-.41a.16.16,0,0,1-.08.19Zm2.82-5.74c.41-1.07,1.31-3.65,2.52-4.2,1.59-.71,1,.56.56,1.4a11.57,11.57,0,0,1-2.1,2.9C163.4,11.71,162.44,12.4,162.73,11.4Z" style="fill:#0E1839"></path><path d="M180.38,14.33c-.11.34.15.7,0,1.06s-.77.79-1.05,1A27.52,27.52,0,0,1,176,19c-2,1.32-5.06,3.52-7.62,3.11-5.34-.86,1.7-9.84,4.49-10.24,3.27-.46,1.34,3.37.17,4.6-.68.71-1.87,2.1-2.83,2.37s-1.62-.63-2.18.65c-1.36,3.08,4.36,0,5.08-.37,1.33-.75,2.6-1.59,3.87-2.44C177.68,16.16,179.48,14.38,180.38,14.33Zm-10.56,2.2c.13.23-.9.91-.58,1,.88.37,3.78-2.49,3.83-3.17C173.2,12.55,170.25,15.89,169.82,16.53Z" style="fill:#0E1839"></path><path d="M184.21,18.91c-1.63.85-3.29,2.61-5.25,2.57-2.32,0-.89-.92.31-1.46.86-.39,3.25-1.2,3.56-2.15.43-1.29-2.3-1-3.12-1.68-2.34-2,1.59-4.36,3.28-5,.87-.34,3.37-.93,2.29.64-.21.32-1.9.72-2.31,1a6.24,6.24,0,0,0-1.95,2.4c2,.74,5.47,1.66,2.69,4.21Z" style="fill:#0E1839"></path></svg>
+    </div>
+    <div id="demo" class="timer"></div>
+    <div class="svg-adv img"><img src="{{section.settings.icon-image-timer | img_url: '500x500'}}" alt="" class="img-01"></div><a href="/" class="home-link">back to candylabtoys.com</a>
+</div>
+{% endif %}
+<div class="m-pagecontainer" id="page-top">
+    <div class="m-header">
+      <div class="svg-logo">
+      {{section.settings.svg-logo}}
+      </div>
+      <div class="h-nav-list"><a href="#cham" class="header-link">Chameleon</a><a href="#specs" class="header-link middle-margin">Specs</a><a href="#buy" class="header-link">Order</a></div><a href="/" class="header-link underline" style="height: 40px; width: 40px;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54.58 54.67"><title>CandybarSVG</title><path d="M28.86,10.62a1.09,1.09,0,0,0-1,.15L10.73,27.87a1.12,1.12,0,0,0-.16,1l3,11.58a1,1,0,0,0,.7.71l11.52,3.15a1.1,1.1,0,0,0,1-.14L43.9,27.08a1.09,1.09,0,0,0,.16-1l-3-11.58a1.13,1.13,0,0,0-.74-.76ZM12.49,28.89l9.28-9.27L19.12,40.46l-3.94-1.08Zm29.65-2.83L32.23,36l3.06-21.53,4.16,1.14Z" style="fill:#060606"/><path d="M12.67,40.83.71,44a1,1,0,0,0-.68.67,1,1,0,0,0,.24.93L9,54.39a.94.94,0,0,0,.91.25.85.85,0,0,0,.43-.25.94.94,0,0,0,.25-.42l3.28-12a1,1,0,0,0-.24-.92A.93.93,0,0,0,12.67,40.83Z" style="fill:#060606"/><path d="M44.69.05A1,1,0,0,0,44,.76l-3.24,12a1,1,0,0,0,.24.93.93.93,0,0,0,.91.25l11.89-3.2a1,1,0,0,0,.43-.25,1.43,1.43,0,0,0,.32-.5,1.05,1.05,0,0,0-.17-1L45.68.22A1.05,1.05,0,0,0,44.69.05Z" style="fill:#060606"/><polygon points="12.49 28.89 21.77 19.61 19.12 40.46 15.18 39.38 12.49 28.89" style="fill:#da2228"/><polygon points="42.14 26.06 32.23 35.96 34.98 14.36 39.45 15.57 42.14 26.06" style="fill:#da2228"/><polygon points="21.77 19.61 28.44 12.76 34.98 14.36 32.23 35.96 26.29 42.15 19.12 40.46 21.77 19.61" style="fill:#fff"/><path d="M28.86,10.62a1.09,1.09,0,0,0-1,.15L10.73,27.87a1.12,1.12,0,0,0-.16,1l3,11.58a1,1,0,0,0,.7.71l11.52,3.15a1.1,1.1,0,0,0,1-.14L43.9,27.08a1.09,1.09,0,0,0,.16-1l-3-11.58a1.13,1.13,0,0,0-.74-.76ZM12.49,28.89l9.28-9.27L19.12,40.46l-3.94-1.08Zm29.65-2.83L32.23,36l3.06-21.53,4.16,1.14Z" style="fill:#060606"/><path d="M12.67,40.83.71,44a1,1,0,0,0-.68.67,1,1,0,0,0,.24.93L9,54.39a.94.94,0,0,0,.91.25.85.85,0,0,0,.43-.25.94.94,0,0,0,.25-.42l3.28-12a1,1,0,0,0-.24-.92A.93.93,0,0,0,12.67,40.83Z" style="fill:#060606"/><path d="M44.69.05A1,1,0,0,0,44,.76l-3.24,12a1,1,0,0,0,.24.93.93.93,0,0,0,.91.25l11.89-3.2a1,1,0,0,0,.43-.25,1.43,1.43,0,0,0,.32-.5,1.05,1.05,0,0,0-.17-1L45.68.22A1.05,1.05,0,0,0,44.69.05Z" style="fill:#060606"/><polygon points="12.49 28.89 21.77 19.61 19.12 40.46 15.18 39.38 12.49 28.89" style="fill:#da2228"/><polygon points="42.14 26.06 32.23 35.96 34.98 14.36 39.45 15.57 42.14 26.06" style="fill:#da2228"/><polygon points="21.77 19.61 28.44 12.76 34.98 14.36 32.23 35.96 26.29 42.15 19.12 40.46 21.77 19.61" style="fill:#fff"/></svg></a></div>
+    <div class="m-hero">
+    <video id="#bg-video" class="mobile-right" playsinline autoplay muted loop style="width: 100vw;">
+    	<source src="{{'CandyLab-Video-Cham.mp4' | asset_url }}">
+  	</video>
+  	</div>
+    <div class="m-image-overlay" style="background-image: url('{{section.settings.overlay-image | img_url: 'master'}}'); background-position:{{section.settings.overlay-image-position}};">
+      <div class="m-overlay-text-container">
+        <div class="large-text">{{section.settings.large-text-01}}</div><a href="#cham" class="oj-button small-margin">{{section.settings.button-text-01}}</a></div>
+      <div class="overlay-image"></div>
+    </div>
+    <div class="full-image" id="cham" style="background-image: url('{{section.settings.full-image-01 | img_url: 'master'}}'); background-position:{{section.settings.full-image-position-01}};"></div>
+    <div class="text-section" style="-webkit-justify-content: center; -ms-flex-pack: center justify; justify-content: center;">
+      <div class="oj-large-text">{{section.settings.large-text-02}}</div>
+      <div class="small-text">{{section.settings.small-text-01}}</div>
+    </div>
+    <div class="full-image" style="background-image: url('{{section.settings.full-image-02 | img_url: 'master'}}'); background-position:{{section.settings.full-image-position-02}};"></div>
+    <div class="full-image" style="background-image: url('{{section.settings.full-image-03 | img_url: 'master'}}'); background-position:{{section.settings.full-image-position-03}};"></div>
+    <div class="text-section" style="background-color: #0e1839; -webkit-justify-content: center; -ms-flex-pack: center justify; justify-content: center;">
+      <div class="oj-large-text">{{section.settings.large-text-03}}</div>
+      <div class="small-text white" style="text-align: center;">{{section.settings.small-text-02}}</div>
+    </div>
+  
+    <div class="full-image" style="background-image: url('{{section.settings.full-image-04 | img_url: 'master'}}'); background-position:{{section.settings.full-image-position-04}};"></div>
+    <div class="m-specs" id="sticker" style = "height: auto; background-color: white; padding: 40px;">
+      <img style = "width:100px; margin-bottom: 40px;" src="{{'sticker-icon.svg' | asset_url }}">
+      <div class="oj-large-text">Comes With a Custom<br>Set of Stickers</div>
+      <img style = "width:100vw; margin-bottom:40px;" src="{{'cham-sticker.svg' | asset_url }}">
+      <div class="small-text" style="color:black; margin-bottom:40px;">Each Drifter Chameleon is a blank canvas ready for you to design as<br>you see fit. The custom Sticker pack comes with your drifter and is<br>chock-full of flags, logos, patterns and more!</div>
+  	</div>
+  	
+    <div class="m-specs" id="sticker-mobile" style = "height: auto; background-color: white; padding: 50px;">
+      <img style = "width:100vw" src="{{'cham-sticker-mobile.svg' | asset_url }}">
+  	</div>
+  	<div class="text-section" id="sticker" style="padding: 20vh 20vw; background-image: url('{{section.settings.gp-image| img_url: 'master'}}'); background-position: center bottom; background-size: cover;">
+    	 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 543.34 50"><defs><style>.cls-1,.cls-2{fill:#fff;}.cls-2{font-size:16px;font-family:Montserrat-Regular, Montserrat;}.cls-3{letter-spacing:-0.01em;}.cls-4{letter-spacing:-0.02em;}.cls-5{letter-spacing:-0.01em;}.cls-6{letter-spacing:0em;}.cls-7{letter-spacing:-0.02em;}.cls-8{letter-spacing:-0.02em;}.cls-9{letter-spacing:0em;}.cls-10{letter-spacing:-0.01em;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M388.74,24.7V41.11h-5.83V0h14.6a5.87,5.87,0,0,1,5.92,5.88c0,4.32,0,8.65,0,13a7.28,7.28,0,0,1-.16,1.55,4.75,4.75,0,0,1-3.87,3.86l-.6.14,4.62,16.69H397.2c-.3-1.27-.61-2.57-.92-3.86q-1.41-6-2.81-12c-.09-.38-.23-.54-.66-.53C391.49,24.72,390.16,24.7,388.74,24.7Zm.05-18.78V18.77h8.73V5.92Z"/><path class="cls-1" d="M494.1,24.42c1.54,5.58,3.07,11.11,4.62,16.69H492.5q-.69-2.88-1.36-5.76c-.8-3.37-1.6-6.74-2.37-10.11-.1-.42-.26-.57-.71-.55-1.3,0-2.6,0-4,0V41.11h-5.86V0h14.55a5.88,5.88,0,0,1,6,6c0,4.27,0,8.53,0,12.8a8.61,8.61,0,0,1-.15,1.61,4.76,4.76,0,0,1-3.9,3.9Zm-1.3-5.64V5.91h-8.72V18.78Z"/><path class="cls-1" d="M502,20.55V6.12A5.86,5.86,0,0,1,508.1,0h8.38a5.87,5.87,0,0,1,6,6c0,2.95,0,5.89,0,8.84q0,10.1,0,20.19a5.88,5.88,0,0,1-4.65,6,7.45,7.45,0,0,1-1.49.14c-2.76,0-5.52,0-8.28,0A6,6,0,0,1,502,35C502,30.17,502,25.36,502,20.55ZM516.6,35.24V5.92h-8.73V35.24Z"/><path class="cls-1" d="M335.75,11.73h-5.88V5.92H321.1v29.3h8.73V25.29H325.5V19.44h10.25V20c0,5,0,10,0,15a5.9,5.9,0,0,1-6.09,6.12h-8.38a5.9,5.9,0,0,1-6.1-6.11V6.12A5.89,5.89,0,0,1,321.27,0h8.5a5.89,5.89,0,0,1,6,6C335.76,7.9,335.75,9.8,335.75,11.73Z"/><path class="cls-1" d="M443.62,0h4.94c.67,0,1.34,0,2,0,.35,0,.48.09.55.44.75,3.57,1.53,7.13,2.29,10.7q3.18,14.8,6.34,29.6c0,.1,0,.21.06.36-.17,0-.31,0-.45,0-1.76,0-3.51,0-5.26,0-.36,0-.52-.08-.59-.47-.3-1.63-.64-3.25-1-4.87,0-.18-.09-.36-.14-.56h-3.09c-2.15,0-4.29,0-6.43,0-.56,0-.73.17-.82.68-.28,1.56-.61,3.11-.92,4.66,0,.18-.08.36-.13.54h-6.2Zm7.63,29.36q-1.89-9.47-3.76-18.86h-.11c-1.33,6.27-2.66,12.54-4,18.86Z"/><path class="cls-1" d="M381.85,41.15c-2,0-4,0-5.89,0-.13,0-.35-.24-.38-.4-.35-1.64-.67-3.28-1-4.92,0-.16-.07-.33-.11-.52l-.5,0c-3.06,0-6.11,0-9.17,0-.4,0-.58.08-.66.52-.29,1.63-.64,3.25-1,4.88,0,.16-.08.31-.11.47h-6.2c2.93-13.71,5.86-27.37,8.8-41.11h.59c2.07,0,4.14,0,6.21,0,.49,0,.65.15.75.62Q375.83,13,378.48,25.3q1.65,7.72,3.31,15.45C381.81,40.86,381.82,41,381.85,41.15ZM369.53,10.5l-.12,0-4,18.84h7.86Z"/><path class="cls-1" d="M415.79,0h14.53a5.87,5.87,0,0,1,6,6q0,6.41,0,12.81a5.74,5.74,0,0,1-5.42,5.87c-1.87.13-3.76.05-5.64.06h-3.6V41.11h-5.88Zm5.89,18.76h8.75V5.91h-8.75Z"/><path class="cls-1" d="M339,0h17.53V5.87H344.89V16.46h8.74v5.86H344.9V35.26h11.66v5.86H339Z"/><path class="cls-1" d="M469.09,41.12h-5.9V5.88h-7.32V0h20.49V5.86h-7.27Z"/><path class="cls-1" d="M531.61,35.26h11.73v5.86H525.8V0h5.81Z"/><path class="cls-1" d="M227.88,18.41l-16.31.07a.77.77,0,0,0-.66.45l-.81,1.82s.85,1.41-.62,4c-2.29,4-5.5,6.06-7.41,6.23a.23.23,0,0,1-.23-.35L214.42,5.31a.62.62,0,0,0-.55-1l-2.25,0a11.9,11.9,0,0,0-10.09,6.76L195.18,23l-.33.72-9.41,4.59c-.36.11-.59-.16-.43-.5.66-1.38,2.8-6.18,3.73-8.27.22-.49,0-.92-.48-.92l-19.2.14a3.17,3.17,0,0,0-2.68,1.81l-2.67,5.87-9.26,3.83c2.06-4.63,10-19.79,12.29-24.86a.51.51,0,0,0-.45-.78l-2.55,0a10.46,10.46,0,0,0-8.88,5.93l-4.69,8.25-3.51,7.71-8.85,3.53c2-4.27,4.39-9.34,4.87-10.27.25-.49,0-.93-.48-.92l-8.41.05a1.21,1.21,0,0,0-1,.7l0,0,0-.06-.2.55-3.83,8.24A1.27,1.27,0,0,1,128,29l-3.79,1.33c-.32.11-.55-.13-.4-.44l4.66-10.33a.4.4,0,0,0-.35-.61l-6.59.05a1.46,1.46,0,0,0-1.24.85l-1.41,3L108.6,28.1s8.56-16.75,11.13-22.45c.18-.41,0-.79-.46-.78h-2.48a10.64,10.64,0,0,0-9,6l-4.64,8.18-10.3.08a2.86,2.86,0,0,0-3,2.07L87.6,26.36l-9.15,3.79c-.34.09-.46-.14-.32-.45.54-1.22,3.3-7.54,4.24-9.54.24-.52,0-1-.55-1l-7.48.05a1.8,1.8,0,0,0-.89.27L64.23,27c-.25.15-.47,0-.34-.27L67,20.09c.23-.43,0-.83-.41-.82l-6.38.06a1.71,1.71,0,0,0-1.86,1.14c-.33.68-1.13,2.47-1.63,3.56l-10.3,5c-.36.11-.59-.16-.42-.5.66-1.38,2.8-6.18,3.73-8.27.21-.49,0-.92-.49-.92L30,19.5a3.14,3.14,0,0,0-2.68,1.81l-2.74,6L12.27,29.69c-.54.06-.84-.39-.62-.91l3.74-9.44L18,14.13A1.92,1.92,0,0,1,19.65,13h3.81c4.43,0,6.45-1.61,8-3.82l1.44-2.87a.8.8,0,0,0-.71-1.22H20c-6.89,0-9.57,2.23-10.94,5.26L5.93,16.62.8,29c-2.55,5.67,1.58,8,4.07,8,0,0,.78,0,3.24,0,2,0,11.55-5.11,15.38-7.19l-1.1,2.41c-.86,1.89.13,3.61,2.08,3.6l3.28,0a3.48,3.48,0,0,0,1.54-.36c.94-.46,4-2.17,4.87-2.53.17-.07.29,0,.21.21-.71,1.35,0,2.65,1.37,2.64l5.73,0a1.85,1.85,0,0,0,.91-.26L55.06,27.8l-2,4.35c-.83,1.79.1,3.43,2,3.42l4.2,0a.66.66,0,0,0,.45-.18c1.18-1,7-6.35,8.92-7.89.25-.2.53,0,.39.27-.36.7-1.13,2.38-1.85,4-.89,2,.13,3.75,2.15,3.74,1.68,0,4.27,0,5.2,0a2,2,0,0,0,.69-.16c1.45-.61,6.31-3,10.61-5.1l-1,2.1c-.76,1.63.1,3.12,1.78,3.11l3.62,0A3.58,3.58,0,0,0,91.92,35c1-.56,4.07-2.4,5-2.77.17-.07.3,0,.22.21-.66,1.51.13,2.86,1.67,2.85l4.29,0a2.17,2.17,0,0,0,1.11-.34l13.31-8.51-2.61,5.24c-.85,1.87.14,3.57,2.06,3.56l3.33,0a3.48,3.48,0,0,0,1.54-.36c.94-.46,4.09-2.32,5-2.69.17-.07.3.06.22.22l-4.62,8.78a2.74,2.74,0,0,1-1.17,1.26L114.16,44l-1.07,1.64a.22.22,0,0,0,.17.36l8.64,0a5.47,5.47,0,0,0,2.2-.63l8-5.38a11.31,11.31,0,0,0,2.67-3.39l.89-1.92L145.1,30l-.7,1.57c-.83,1.85.14,3.53,2,3.51l5.87,0,0,0h0s6.13-3,9.52-4.6l-.43,1c-.87,1.89.13,3.61,2.08,3.6l3.27,0a3.46,3.46,0,0,0,1.54-.36c1-.46,4-2.17,4.87-2.53.17-.07.3,0,.22.21-.71,1.35,0,2.65,1.37,2.64l5.73,0a1.88,1.88,0,0,0,.9-.25l11.61-6.94L192,30c-.94,3.29.91,4.82,3.44,4.81l6.61,0c2.83,0,7.83-1.55,10.24-3.54,3.2-2.66,6.08-7.75,6.75-9a.84.84,0,0,1,.46-.37l7.88-1.24a.81.81,0,0,0,.48-.41l.42-1.06A.48.48,0,0,0,227.88,18.41ZM39.1,22.93,36,29a1.26,1.26,0,0,1-.71.61l-3.7,1.26c-.33.11-.55-.13-.4-.43L34.9,23a1,1,0,0,1,.81-.54l3.12,0C39.1,22.42,39.23,22.67,39.1,22.93Zm59.57,5.69a1.26,1.26,0,0,1-.71.61l-3.69,1.26c-.33.11-.56-.13-.41-.43l3.51-7.42a1,1,0,0,1,.81-.54l3.45,0Zm79.49-6.45-3.06,6a1.26,1.26,0,0,1-.71.61l-3.69,1.26c-.33.11-.55-.13-.41-.43L174,22.22a1,1,0,0,1,.81-.54l3.11,0C178.17,21.66,178.3,21.91,178.16,22.17Z"/><polygon class="cls-1" points="282.13 9.98 281.17 9.02 271.43 18.75 261.69 9.02 260.73 9.98 270.47 19.71 260.73 29.45 261.69 30.41 271.43 20.68 281.17 30.41 282.13 29.45 272.39 19.71 282.13 9.98"/></g></g></svg>
+      <div class="small-text white">Our Exlusive Stockist Gear Patrol</div>
+  	</div>
+  	<div class="text-section" id="sticker-mobile" style="padding: 20vh 20vw; background-image: url('{{section.settings.gp-image| img_url: 'master'}}'); background-position: center bottom; background-size: cover;">
+    	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 235.1 110"><defs><style>.cls-1,.cls-2{fill:#fff;}.cls-2{font-size:14px;font-family:Montserrat-Regular, Montserrat;}.cls-3{letter-spacing:-0.01em;}.cls-4{letter-spacing:-0.02em;}.cls-5{letter-spacing:-0.01em;}.cls-6{letter-spacing:-0.01em;}.cls-7{letter-spacing:-0.01em;}.cls-8{letter-spacing:-0.01em;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M92.32,89.58V99.8H88.69V74.21h9.09a3.63,3.63,0,0,1,3.68,3.65c0,2.7,0,5.39,0,8.08a5.31,5.31,0,0,1-.09,1A3,3,0,0,1,99,89.31l-.38.09c1,3.47,1.92,6.91,2.88,10.39H97.59c-.19-.79-.38-1.6-.57-2.41q-.88-3.73-1.76-7.48c-.05-.24-.14-.34-.41-.33C94,89.59,93.21,89.58,92.32,89.58Zm0-11.7v8h5.44v-8Z"/><path class="cls-1" d="M157.92,89.4l2.88,10.4h-3.88c-.28-1.2-.56-2.4-.85-3.59-.49-2.1-1-4.2-1.47-6.3-.06-.26-.16-.35-.44-.34-.81,0-1.62,0-2.49,0V99.79H148V74.21h9.05a3.65,3.65,0,0,1,3.72,3.7q0,4,0,8a5.47,5.47,0,0,1-.09,1,3,3,0,0,1-2.43,2.43Zm-.81-3.51v-8h-5.43v8Z"/><path class="cls-1" d="M162.82,87V78a3.64,3.64,0,0,1,3.81-3.8h5.23a3.65,3.65,0,0,1,3.76,3.72c0,1.84,0,3.67,0,5.51V96a3.66,3.66,0,0,1-2.89,3.71,4.9,4.9,0,0,1-.93.1c-1.72,0-3.44,0-5.16,0A3.75,3.75,0,0,1,162.8,96C162.86,93,162.82,90,162.82,87Zm9.11,9.15V77.89h-5.44V96.14Z"/><path class="cls-1" d="M59.33,81.5H55.67V77.88H50.2V96.13h5.44V89.94h-2.7V86.3h6.39V96a3.67,3.67,0,0,1-3.79,3.81c-1.74,0-3.49,0-5.23,0A3.67,3.67,0,0,1,46.52,96V78a3.66,3.66,0,0,1,3.79-3.8H55.6a3.67,3.67,0,0,1,3.73,3.72Z"/><path class="cls-1" d="M126.49,74.21h3.08c.41,0,.83,0,1.25,0,.21,0,.29.06.34.28q.71,3.33,1.43,6.66,2,9.21,3.94,18.43c0,.07,0,.13,0,.22l-.28,0H133c-.22,0-.32,0-.36-.29-.19-1-.4-2-.61-3,0-.11,0-.22-.08-.35H130c-1.34,0-2.67,0-4,0-.35,0-.46.11-.51.43-.17,1-.38,1.93-.58,2.89,0,.12,0,.23-.07.34H121Zm4.75,18.27L128.9,80.74h-.07c-.83,3.91-1.65,7.81-2.49,11.74Z"/><path class="cls-1" d="M88,99.82H84.36c-.08,0-.21-.15-.24-.25-.21-1-.41-2-.62-3.07,0-.1,0-.2-.08-.32l-.3,0H77.41c-.25,0-.36,0-.41.32-.18,1-.4,2-.61,3,0,.1,0,.19-.07.29H72.46l5.48-25.59h.37c1.29,0,2.58,0,3.87,0,.3,0,.4.09.46.38Q84.28,82.28,85.93,90c.69,3.21,1.37,6.41,2.06,9.62ZM80.36,80.73l-.07,0L77.8,92.48h4.9Z"/><path class="cls-1" d="M109.16,74.21h9a3.65,3.65,0,0,1,3.74,3.7q0,4,0,8a3.57,3.57,0,0,1-3.37,3.66c-1.17.08-2.35,0-3.52,0h-2.23V99.79h-3.67Zm3.67,11.67h5.45v-8h-5.45Z"/><path class="cls-1" d="M61.36,74.22H72.28v3.63H65v6.6h5.44V88.1H65v8.05h7.26V99.8H61.36Z"/><path class="cls-1" d="M142.35,99.8h-3.67V77.86h-4.56V74.22h12.76v3.63h-4.53Z"/><path class="cls-1" d="M181.27,96.15h7.31V99.8H177.66V74.22h3.61Z"/><path class="cls-1" d="M188.34,8.75l-10.15.05a.46.46,0,0,0-.41.27l-.51,1.14s.53.88-.38,2.47c-1.43,2.49-3.42,3.77-4.62,3.88a.15.15,0,0,1-.14-.22L180,.59a.38.38,0,0,0-.34-.59h-1.4a7.4,7.4,0,0,0-6.28,4.21l-4,7.38-.2.45-5.86,2.85c-.23.07-.37-.1-.27-.31.41-.86,1.74-3.85,2.32-5.15.14-.3,0-.57-.3-.57L151.72,9a2,2,0,0,0-1.67,1.13l-1.66,3.65-5.77,2.39c1.28-2.89,6.22-12.33,7.66-15.48.11-.26,0-.49-.28-.49h-1.59a6.53,6.53,0,0,0-5.53,3.69L140,9l-2.19,4.8L132.26,16c1.25-2.66,2.73-5.81,3-6.4.16-.3,0-.57-.3-.57l-5.23,0a.75.75,0,0,0-.64.43v0l0,0-.12.34L126.58,15a.72.72,0,0,1-.44.38l-2.36.83c-.2.07-.34-.08-.25-.27l2.9-6.43a.25.25,0,0,0-.22-.38l-4.1,0a.92.92,0,0,0-.77.53l-.88,1.89-6.39,3.24s5.34-10.42,6.93-14a.32.32,0,0,0-.28-.49h-1.54a6.63,6.63,0,0,0-5.61,3.74l-2.89,5.09-6.41.06a1.78,1.78,0,0,0-1.87,1.28L101,13.7l-5.7,2.36c-.21.06-.28-.08-.19-.28.33-.76,2-4.69,2.63-5.94.15-.32,0-.61-.34-.61l-4.66,0a1.07,1.07,0,0,0-.55.17l-5.74,4.66c-.15.1-.29,0-.21-.16l1.9-4.13c.15-.27,0-.52-.25-.52l-4,0a1.09,1.09,0,0,0-1.17.71l-1,2.22-6.41,3.13c-.23.06-.37-.1-.27-.31.42-.87,1.75-3.85,2.33-5.15.13-.31,0-.58-.3-.58l-12,.09a1.94,1.94,0,0,0-1.66,1.13L61.76,14.3,54.1,15.77a.37.37,0,0,1-.39-.56L56,9.33l1.63-3.24a1.19,1.19,0,0,1,1-.7h2.38c2.75,0,4-1,4.95-2.38l.89-1.79a.49.49,0,0,0-.43-.75H58.91c-4.29,0-5.95,1.38-6.8,3.27l-2,3.9L47,15.34c-1.59,3.52,1,4.95,2.53,4.95,0,0,.48,0,2,0,1.21,0,7.19-3.18,9.57-4.48l-.68,1.5a1.46,1.46,0,0,0,1.29,2.25h2a2.44,2.44,0,0,0,1-.23c.59-.29,2.47-1.35,3-1.58.1,0,.18,0,.13.14-.44.84,0,1.64.85,1.64l3.57,0a1.16,1.16,0,0,0,.56-.16l7.9-4.72-1.26,2.71a1.38,1.38,0,0,0,1.21,2.13l2.62,0a.43.43,0,0,0,.28-.11c.74-.64,4.37-3.95,5.55-4.91.16-.13.33,0,.25.17-.23.44-.7,1.48-1.16,2.48a1.51,1.51,0,0,0,1.34,2.33l3.24,0a1.11,1.11,0,0,0,.43-.09c.9-.39,3.93-1.88,6.61-3.18l-.61,1.3a1.26,1.26,0,0,0,1.11,1.95l2.26,0a2.31,2.31,0,0,0,1.08-.22c.63-.35,2.53-1.5,3.1-1.73.1,0,.18,0,.13.14a1.16,1.16,0,0,0,1,1.77l2.67,0a1.37,1.37,0,0,0,.69-.2l8.29-5.3L118,17a1.43,1.43,0,0,0,1.28,2.21h2.07a2.19,2.19,0,0,0,1-.22c.59-.29,2.54-1.45,3.11-1.67.11-.05.18,0,.13.13l-2.87,5.46a1.69,1.69,0,0,1-.73.79l-4.4,1-.67,1a.13.13,0,0,0,.11.22h5.38a3.53,3.53,0,0,0,1.37-.39l5-3.35a6.94,6.94,0,0,0,1.67-2.11l.55-1.2L136.8,16l-.44,1a1.43,1.43,0,0,0,1.28,2.19l3.66,0v0h0s3.81-1.86,5.93-2.86l-.27.59a1.45,1.45,0,0,0,1.29,2.24h2a2.22,2.22,0,0,0,1-.22c.59-.29,2.47-1.35,3-1.58.11,0,.19,0,.14.13-.45.84,0,1.65.85,1.65l3.57,0a1.19,1.19,0,0,0,.56-.16l7.23-4.32L166,16c-.59,2,.56,3,2.14,3l4.11,0a12.41,12.41,0,0,0,6.38-2.21,21.71,21.71,0,0,0,4.2-5.6.48.48,0,0,1,.29-.23l4.9-.78a.44.44,0,0,0,.3-.25l.26-.66A.29.29,0,0,0,188.34,8.75ZM70.8,11.57l-1.9,3.75a.81.81,0,0,1-.45.38l-2.3.79c-.2.06-.34-.09-.25-.28l2.29-4.61a.59.59,0,0,1,.5-.34h1.94C70.8,11.25,70.88,11.4,70.8,11.57Zm37.09,3.54a.76.76,0,0,1-.44.38l-2.3.78c-.2.07-.34-.08-.25-.27l2.18-4.61a.61.61,0,0,1,.51-.34h2.15Zm49.5-4-1.91,3.76a.76.76,0,0,1-.44.38l-2.3.78c-.2.07-.34-.08-.25-.27l2.28-4.62a.61.61,0,0,1,.51-.33h1.94A.2.2,0,0,1,157.39,11.09Z"/><polygon class="cls-1" points="124.21 41.12 123.61 40.52 117.55 46.58 111.49 40.52 110.89 41.12 116.95 47.18 110.89 53.24 111.49 53.84 117.55 47.78 123.61 53.84 124.21 53.24 118.15 47.18 124.21 41.12"/></g></g></svg>	 
+  		<div class="small-text white">Our Exlusive Stockist Gear Patrol</div>	
+  </div>
+  	<div class="m-specs" id="specs">
+      <div class="s-left-container">
+        <div class="medium-text specs" style="margin-bottom: 20px; color: black; border-bottom: 2px solid #000;">Specs</div>
+        <div class="small-text left-align">{{section.settings.small-text-03}}</div>
+        <div class="s-table-container">
+          <div class="table-title">
+            <div class="table-item bold">SIZE</div>
+            <div class="table-item bold">WEIGHT</div>
+            <div class="table-item bold">PACKAGING</div>
+          </div>
+          <div class="table-content">
+            <div class="table-item">{{section.settings.small-content-01}}</div>
+            <div class="table-item">{{section.settings.small-content-02}}</div>
+            <div class="table-item">{{section.settings.small-content-03}}</div>
+          </div>
+          <div class="table-content">
+            <div class="table-item">{{section.settings.small-content-04}}</div>
+            <div class="table-item">{{section.settings.small-content-05}}</div>
+            <div class="table-item">{{section.settings.small-content-06}}</div>
+          </div>
+          <div class="table-content">
+            <div class="table-item">{{section.settings.small-content-07}}</div>
+            <div class="table-item">{{section.settings.small-content-08}}</div>
+            <div class="table-item">{{section.settings.small-content-09}}</div>
+          </div>
+        </div>
+      </div>
+      <div class="s-right-container"></div>
+    </div>
+    <div class="divider-svg" style="display:none;">
+    {{section.settings.svg-divider}}  
+    </div>
+    <div class="m-buy" id="buy">
+      <div class="buy-text-container">
+        <div class="medium-text w100">Order&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <div class="small-text mobile-left white">{{section.settings.small-text-04}}</div>
+        <a href="{{section.settings.main_product}}" class="oj-button white">
+          <div class="oj-text">BUY NOW</div>
+        </a>
+      </div>
+      <div class="buy-text-container right dimention">
+      <model-viewer auto-rotate camera-controls background-color="#F9AA59" src="https://res.cloudinary.com/youngdesin/raw/upload/v1568649266/chameleonFinal" style="width: 100%; height: 100%;"></model-viewer>
+      </div>
+      <div class="back-to-top">
+        <a style="position: absolute; height: 100%; width: 100%;" href="#page-top"></a>
+        </div>
+    </div>
+  	<div class="m-buy" id="accessories" style="background-color: white;">
+      <div class="buy-text-container">
+        <div class="medium-text w100" style="color: #F9AA59; border-bottom: 2px solid #F9AA59">Borneo Adventure Pack</div>
+        <div class="small-text mobile-left white" style="color: #F9AA59;">{{section.settings.small-text-05}}</div>
+        <a href="{{section.settings.off_product}}" class="oj-button" style="font-weight: 600;">
+          <div class="oj-text" style="color: white; font-size: 18px;">BUY NOW</div>
+        </a>
+      </div>
+      <div class="buy-text-container right">
+        <div class="s-right-container large" style="background-image: url('{{section.settings.accessories-image | img_url: '1000x1000'}}'); max-height: none; margin-top: 0px; margin-bottom: 0px;"></div>
+      </div>
+      <div class="back-to-top">
+        <a style="position: absolute; height: 100%; width: 100%;" href="#page-top"></a>
+        <div>
+		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 67 67"><defs><style>.a{isolation:isolate;}.b{opacity:0.5;mix-blend-mode:multiply;}.c{fill:#fff;}.d{fill:none;stroke:#F9AA59;stroke-linecap:round;stroke-linejoin:round;stroke-width:2px;}</style></defs><title>Asset 1</title><g class="a"><image class="b" width="67" height="67" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEMAAABDCAYAAADHyrhzAAAACXBIWXMAAAsSAAALEgHS3X78AAASpklEQVR4Xu1cTXYbR5L+IjKrCoUiKEIi3Rq17aE23PB51RfAJXgfnsNX0AF6ywv0khttmjPt4diGaJAECkBVZUbMIjOB4o9+Lct6MxPv1SMhoTKzvvziJyOiSKqK/5cg/L4v/F8S+74vfE4hIup/Pj09vfO59+936KpfiL70R87Tf/j04Ofn5zSdTgkAjo6OCABmsxkBwHg8VgB4/fq1AsDBwYEeHx9rvH+z0D8KnM/OjB4AdHp6unn4y8tLKoqCq6oiADQYDHg2m9FoNKLRaAQAcM5hPp/rd999p+v1Wqqq0qurK22aRiaTiSZw0hSfG5TPxowEwunpKZ2fn9N4PObZbEZVVXGe52ytZeecMcZwXdesqsYYw845yvOcAKBtW7XWqvdeiMhXVSXWWu+9F+ectG0rdV3LdDqVg4MDffXqlSJg8lke4rOAQUTUB6EoCm6axjjnzHq9tkVRWFU1XdfZLMtsBMKqqmFm9t4TABhjVESEiLz33llr3Xq99lmWuaZpXFEUbjgcuul06gH44+NjOT8//2yg/C41iWygk5MTury85OfPn/P19bVFGDez1mZlWeYAMhHJi6LIRCRn5oyIrKpaIjLMTHE8BeCJyBljOlXtyrJsAXSq2hJR27Ztu7u726lqd3Nz4wD4yWQik8lEfq/6fDIzEhvOzs744OCAx+OxrevaVlWVr9frwlpbqOoAwADAgIgKAANVzZk5V9WciCwAg62LFwAeQIcAQKOqjTGmAbAmorX3fiUiDYC1MaZV1W4+n7t4n/89LPloZiTbcHJywpeXl3x4eGiGw6FtmiavqqpwzpVZlg0BDJl5qKoVgKGqlojAqGrBzDmATFUNETEAqKoQkUcEAkBDRGsAKwBLEVkyc22trQEsvfcrZl5XVdV477u9vT2aTCY+seRjAfkoZvTVAoAZj8cWQLZarYqyLAciUjnndph5B8BIVXeJaIeZK+99xcyJKQWAHECGtzOjBbBW1TUzL0WkJqIFEc0BzAHMVXXRdV2d5/mSmdfOuUZEujzP/Ww2k1evXsnHAPLBzEhATCYTXiwWZn9/3xpjcu/9oCzLoXNuR0R2iegJgCcA9ph5V1V3VXUnsqSM6lIgsMIys1FVjnOIiHgichpsRIMAyArAAsBCRG4B3AC4NsbcWGtvVTVv23ZhrTXW2vVsNmvH47E7OTkBEX0wIB8ERh+IsizNy5cvs8ViUXRdVzrndgCMmPmJMWasqmMiGgMYR2B2AVQAhkQ0AJATUSYiGREZVTUACAiKTkReVT0zd6raAmgArIhoqaoLIroFcK2qI1WtiKgkosIYk6mqXS6Xm1gGwEcB8kFgAMDJyQktFgvz8uXLzDk3GAwGw6ZpRsz8hJnHAJ6q6rP48ykRjUVkF8AIwBDBiCY7YSkYT1ZVjmAnMCQu3qmqA9CqakNEKyKqEcAdEVEatwRQRIANB6HFYkHj8RgA9EMBeS8YREQnJycMwOzv79vFYlEMBoOh937XGLOnqs9UdZ+I9oloX1WfRWY86S9YVXNVzYjIYGsnNkDEuYCAiRCRILpZBPvREFGlwSBXqlqpasnMA1UtRCRjZpNlGTMzBoMB2rbVuq51PB6709NTpfcY1XeCQRTc5+XlJQOwxpi867qyaZqRMWYPwAERHRDRN6r6DYD9CMQegB0E9RhodKOqahMT+ox4RBRAAkQQbMxAREoiKhHYUBJRoaoFgupZETFERCIC5xxERMfjsbZtq2dnZ2nMtwLyXmacnZ3x4eGhyfM8894PRKRi5ieRAQdE9BzAXwB8g6Aie0S0g6ga2osnKLhQQsD5PiOQ1pgYEi8BYCOrUnySU1Q5bNVuAwQRqbVWwkcRZpYffvhBeyH8o/JWMIg26sHD4dCuVqtcRIZEtGut3RORfSL6BgGIvzDzvqqOEWxEqaoDIsoiEBwvUtU+DsBD954+UPydEXbUIACa1CxFujb+2yaKFRGvqt4Y451zLs9zf319LQD0XeryLmbQ8fExnZ+fG1XNAAyyLKtUdRfAUwr2IanJPoCnCMZtiOg6Eca/A8J9JB6Rx/4/xSFJvRg9u5PGVt14I2et7QB0xphORJwxxgGQs7OzpHofBkZkBZ2fn/NoNLKr1aqIccIoqsHTqCb7GjzIHrYudAAgGcrNQj8AhMfk/j3JzpCqbtQtDq0UolcXw/QGQKOqTdd1bZ7n3Wg08gD8ycmJEhHdZ8fbmEHHx8d0c3Njbm9vMwTdrwDsUjCQT5n5qYikWGLjPhGB0BBIpYV+ChB92dzfA9eqKqlqOuAJAAegS2cXZl6JyCrLsrUG99wBcNPpVB6b5AEY91lhrS2IqFTVHcTIMoIwjp8TEAXuAYHfD8J9SRvKiRFRhUtswWiJaK2qKYSvVbVGONs0o9GoA+BPT08feJZHE8IxLWeIKGvbtkB42JEGe7EXrw0QqjqIi/ojgUiSQCAEtbEI9mmAEH/sIm4agL34eUREwzzP86IobFVVfHZ29uDZ7zCDaJOkYUQwmLlACKV3VPUJQjD1BMAOEd1hBLYg/FFAJOkzBBpca64hZTBEePhdBDu2KyI3WZaVRFRYa1fee3N0dOQnk0nyWAAeUZPz83OqqooBWO99TkTJXoyIaFfjSRRhFwYUfH46YzB9kp38JCEKtoKIiFXVIgRfJYIh30msiKfmoYgUXddle3t75tmzZ7QZJKrKAzCm0yl9++23dHV1Zay1maoOmHkoIjsIbNhElhQCnxRQJRS+GBrYzkUU3K3VEJQNENZYRUZvDnQAMuecubi44Lqu7zDjjt6cnp7S0dER/fTTTybPcysiOWIYjEC/dKWcxMZORB3+kkD0hRDcuCGiDDF8R2/Nuk0fZN57k+c5p5JFkgfMmM1mlOc5i4gBkBljchEZ0PZM0AfC4t5h60+QO+zoAxIffpN2jKzJRMTc3Nzw0dER9e3GhhlEROfn5/T8+XPKsoydc5aIMu/9/UHTmaAfZn8NkrwLI7DVqmqOYEfy+HumMSM/Go0oFa+SPGDGfD4nYwxba9OAGRHlItIftJ/I/VIe5F2SdpcQ1mQouNzkdjMKp1oLwDAzV1VF33///Z1B7uzqdDqluq5puVwyM3O8OUv0wpYRfSC+FiHqxR/xShu6OTUTETdNw03T0NXV1cajAI9QfDwe02AwIA2FHkMxD4EIRHShBtieD+6P8WeJhlCdENaWAOFkSwCwMYayLKO2bQkIoUS6/w4Y8/mcVqsVFUVBXdelk6FBQHiDLLDJSeBrlcQSIiJVJWYmVSUReeui+2DQ3/72N6zXa3LOkbWWRCTtPhMRich9G7Gx5Pj6JLEEzB9m4x98azAYPJoJ0u3p8H+t9MHQf/zjHwAAa60659QYI8wsiPlIVU1HZcXdEt7XCNJmfSKPntgfyB3XOhqNtCxLbZpGsyyTruuEiDwzp7S9ByCqKgjJlJSn/OrUJDFZg+FQEVEiUmZ+68Y9UJPZbKbee2nb1jOzQywCY1sMdkTkKWSuvypGpIdH2KiU3hPd1nDFe69d12me5woAqTMIuMeMg4MDrapKy7KUtm2dqnYAOiJqEWoXLQIoiSEaF7DJcP+JktaRVLlfd3EAfGS0FEUhWZbps2fPdHMj7jHj+PhYR6PRpnMGQMfMjcbWAAq1z9Qv4eKEfXX5s6RvuwThwZNqbxjNzI6IvIhIXdd6fn5+Z5ANGAmdpmnEWuudc05VEyvWANYi0mhItLYRcY+3ZJr/BFFs7ZknIpcYrbHRBYHlXkRkPp9raqhLcqdmQUQ0mUzM0dFR3nVdpap7xphvmPmvInII4N9V9Xsi+jcA+wB2NdZHcPec8iUlsVLi5q0B3AJ4o6r/TUT/qaoXAP7DGPOTiPxqjLkGsHz9+nV7dnbmH1UTINiNtm1lMBg4xKYR7/0awLJ3rRHS8F0yTPhz2aEI7t9rsHMNwho3ayaiVWR1Z4zxbdvKwcHBnTU/ACPZDWutHwwGnbW2McYsVXWhqgsAdZxgTURt1M1N7IEvC8pmTlUVDZ4uAVEDqNOaVXWlwfZ11lp/eHgofU8C3AOjbzeur689go6tEdLsNYA5hf6IeZoAwX50CZA4xJcAZDOXBtfZIdiHBETq5ZiLSG2MWVprm6qquuvra395eXnHkwB4UOfc2I3Dw0NblmXpvR95758B+IuIfMvM36nqd0T0V4Ri8xih4l4iHu81Zq3xx9kP1eBGU9uTQ+j7WgCYAfhVVf+LiP4lIv9i5p8A/GKMuTLGzFer1eri4sL17QXwlizVZDKRuq6laRrXtm2rqktVXTDzDYBrIrpW1WsAt6pax91oEBaVQnfgj2FIH4hUOGpUda2hWHSrqtdEdA3gmplvNKj4sm3btmkaV9e1TCaTBzH6g0yXqioRIX7Z7e7utsaYlaouvPc3CBnnCr1KO3rJnnA7WQpHaKaYzr8/zyeKYhvXCLaNcCsiWiD0es0A/AbgN1WdAbgxxiyIaOW9b29vb910OpXT01PtswJ4RxU+Wlqvqp2INM652lp7670vcbd9MWW+UtYICIu2j6jKp4KSFq2RdZtSIrbqcYMAwpWqvkFwrTNjzG3XdbW1ttHgafx9L5LkUTAiO3QymUhVVZ2INIPBYLlarXJrbQ4g17ttSZtqexoijgPqJYN6U3woKNr7mWKJPiPWCMb8RlWviGiqqr8CmBLRFRHNuq6bl2W5XK/XDYBuOp3K2dnZA1YA785s62QykTzPvfe+Wy6Xa2vtQlVvROQKYcJfAPxCRL8S0RWAZEeWCNRttHfaxTYeue+KH7v6392E2NjGEDW2avGGiH4F8AuAX5j5VxG5UtUba+1iuVyuvfddnuc+qv+HMwPY2o6TkxNZLBbu5cuXzWq1YmNM6tAzGloC0i6nhft4OQ1dwR4xdxpZwsCd5O0DoW3Fb8MGCiflTredfwtVvUWwDW+Y+RcR+SX+fMPMMyK69d4vd3Z2mn/+859uZ2dHfvzxx0dZAby7cwcA8OrVK51MJn65XFLXdU1Zluyc46IoqJc00Qie1xD4JBq3FGq1BRH1W6NZRKivV31JuQdsgUgHroaIVgASEDNVfUNEUwR3OhWRqar+5r2/zbJs2bZto6putVr5v//97+/0bu9tl44LpslkwoeHh3Y0GuWr1ark0BL9RESeee/3ARwgdP/tI7Q57SG0LKRunk05Eu8vNWxYRqFbOIXYK4Rg75aIZoisoGAr3lBQ1d+cc7dZli3KslzN5/M2xhQpKHzrA7+XGXHHMZlM5PLy0v/888/deDwmEUHXdbDWKoCUDUstzitVrSm2LqAHiD5siAW2oKj2YogeyzZAIETBN6o6o2Akr1T1SlV/Q7BZ8yzL6rIsV3GtfjKZvNVo9uW9YABbQE5PTz0AzGYzPH/+PA2c+jWdhvbmNRHVFBrebzW0BaR26dRAvynq6LbWsfFi2NqezZgA7rRLA5gR0SyCck1EN977hfd+KSJr51w7Ho/9ixcv/GMxxWPyQWAADwGZz+fadR3yPBdmFuecy7KsFZEVgFpE5kR0g9DXsekLpV7LNPCwQzguWijkIzoiakRkTUQ1My9EZK6qN8aYG1W98d7fIrClbppmVZZlIyLdxcWFm0wmjwZXb5P32oz7QrR96ebw8NAOh0O7WCyK4XA4WK/XwyzLKu/9DhHteO9HzFwhMgMP+8dZQ4EHACCxoVXvGU1sj+PpFDpX1YUxZtF1XV0UxdIYs14sFu2bN2/carXyH2Ij7ssHMyNJYggAmUwmrixL3d/f1/V67a216Qi9AlBnWXbrvR9SaJBL7c05hXDdaKiIb5jBzMmTeMS4gnqZNvTyE9balXNuxcxrAK33vluv125nZyd5jY8CAvgEZiSJ9KaTkxMaj8fctq3h8O5Z5r3P8zzPiahwzhVEVCQgEN5XsxRdrN6LNajnUlN23nvfGmNSynEtIo0xpl0ul23XdV1VVa7/wg0AfCwQwO8AA9gAgv67agDMaDSyRVFYa62t6zqjWMGnGGtojDeMMQ9qn8ys3vukKt4Y47z3Keu2ufpvMU6nU/lY+/CY/C4wkvRZMp1O6eDggKuqYu+92dvbM8454703sn0fhJum4SzLHo0zuq7ToigkCTP7xWLhKRS0vDHGp/dbEwjAp7GhL58FjCT3mXJ0dEQvXrygi4sLzvOcZ7MZj0YjqqqKmqbZtAXclzzPtSgKretaYxZb2raVw8NDuby81NlsJsfHx/q5QEjy0Qb0XZIWFTFJfZao65ouLi7o6OiIZrMZff/997i6uqKiKN461rNnz/Tnn3/GeDzW169fazx264sXL/Djjz/qq1evPhsIST4rMx6TxBYAmz8OkKTfKNKX+4naL/FHAYAvAMbbpA/SY/JHPvTb5E8D42uU/wG22gD03gHsCQAAAABJRU5ErkJggg=="/><circle class="c" cx="32.93" cy="32.84" r="24"/><polyline class="d" points="21.47 38.3 32.93 26.85 44.39 38.3"/></g></svg>
+      </div>
+    </div>
+  </div>
+    <div class="legal">
+      <div class="legal-text">Terms of Service  |  Privacy Policy  |  © 2019 Candylab Toys, All rights reserved.</div>
+    </div>
+  </div>
+
+<!-- Loads <model-viewer> for modern browsers: -->
+<script type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js">
+</script>
+
+<!-- Loads <model-viewer> for old browsers like IE11: -->
+<script nomodule
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+</script>
+
+<script>
+// Set the date we're counting down to
+  var countDownDate = new Date("Sept 25, 2019 09:00:00 GMT-0400").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, remove the countdown
+  if (distance < 0) {
+    clearInterval(x);
+    console.log("im done");
+    $( "._100vh" ).css( "display", "none" );
+    var body = $("Body");
+    body.css("overflow", "visible");
+  }
+}, 1000);
+
+
+$(window).scroll(function() {
+    var top_of_element = $("#bg-video").offset().top;
+    var bottom_of_element = $("#bg-video").offset().top + $("#bg-video").outerHeight();
+    var bottom_of_screen = $(window).scrollTop() + $(window).innerHeight();
+    var top_of_screen = $(window).scrollTop();
+
+    if ((bottom_of_screen > top_of_element) && (top_of_screen < bottom_of_element)){
+        $("#bg-video").muted = false;
+    } else {
+        $("#bg-video").muted = true;
+    }
+});
+//smooth scroling on hash link
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": [
+		{
+   			"type": "url",
+   			"id": "main_product",
+   			"label": "Feature product"
+		},
+		{
+   			"type": "url",
+   			"id": "off_product",
+   			"label": "Accessories product"
+		},
+		{
+     	"type": "checkbox",
+     	"id": "display-timer",
+     	"label": "Toggle Timer",
+		"default": true
+        },
+		{
+     	"type": "image_picker",
+     	"id": "icon-image-timer",
+     	"label": "Timer Icon Image"
+        },
+		{
+     	"type": "text",
+     	"id": "svg-logo",
+     	"label": "Svg Logo"
+   		},
+		{
+     	"type": "text",
+     	"id": "svg-divider",
+     	"label": "Svg Divider"
+   		},
+		{
+     	"type": "image_picker",
+     	"id": "overlay-image",
+     	"label": "Overlay Image"
+        },
+   		{
+   		"type": "select",
+		"id": "overlay-image-position",
+    	"label": "Overlay Image Position Select",
+		"options":
+    		[
+			{ "value": "left top", "label": "left top" },
+			{ "value": "left center", "label": "left center" },
+			{ "value": "left", "label": "left bottom" },
+			{ "value": "right top", "label": "right top" },
+			{ "value": "right center", "label": "right center" },
+			{ "value": "right bottom", "label": "right bottom" },
+			{ "value": "center top", "label": "center top" },
+			{ "value": "center center", "label": "center center" },
+			{ "value": "center bottom", "label": "center bottom" }			
+			]
+   		},
+		{
+     	"type": "image_picker",
+     	"id": "full-image-01",
+     	"label": "Full Image 01"
+        },
+   		{
+   		"type": "select",
+		"id": "full-image-position-01",
+    	"label": "Full Image 01 Position Select",
+		"options":
+    		[
+			{ "value": "left top", "label": "left top" },
+			{ "value": "left center", "label": "left center" },
+			{ "value": "left", "label": "left bottom" },
+			{ "value": "right top", "label": "right top" },
+			{ "value": "right center", "label": "right center" },
+			{ "value": "right bottom", "label": "right bottom" },
+			{ "value": "center top", "label": "center top" },
+			{ "value": "center center", "label": "center center" },
+			{ "value": "center bottom", "label": "center bottom" }			
+			]
+   		},
+		{
+     	"type": "image_picker",
+     	"id": "full-image-02",
+     	"label": "Full Image 02"
+        },
+   		{
+   		"type": "select",
+		"id": "full-image-position-02",
+    	"label": "Full Image 02 Position Select",
+		"options":
+    		[
+			{ "value": "left top", "label": "left top" },
+			{ "value": "left center", "label": "left center" },
+			{ "value": "left", "label": "left bottom" },
+			{ "value": "right top", "label": "right top" },
+			{ "value": "right center", "label": "right center" },
+			{ "value": "right bottom", "label": "right bottom" },
+			{ "value": "center top", "label": "center top" },
+			{ "value": "center center", "label": "center center" },
+			{ "value": "center bottom", "label": "center bottom" }			
+			]
+   		},
+		{
+     	"type": "image_picker",
+     	"id": "full-image-03",
+     	"label": "Full Image 03"
+        },
+   		{
+   		"type": "select",
+		"id": "full-image-position-03",
+    	"label": "Full Image 03 Position Select",
+		"options":
+    		[
+			{ "value": "left top", "label": "left top" },
+			{ "value": "left center", "label": "left center" },
+			{ "value": "left", "label": "left bottom" },
+			{ "value": "right top", "label": "right top" },
+			{ "value": "right center", "label": "right center" },
+			{ "value": "right bottom", "label": "right bottom" },
+			{ "value": "center top", "label": "center top" },
+			{ "value": "center center", "label": "center center" },
+			{ "value": "center bottom", "label": "center bottom" }			
+			]
+   		},
+		{
+     	"type": "image_picker",
+     	"id": "full-image-04",
+     	"label": "Full Image 04"
+        },
+		{
+     	"type": "image_picker",
+     	"id": "gp-image",
+     	"label": "Gear Patrol BG Image"
+        },
+   		{
+   		"type": "select",
+		"id": "full-image-position-04",
+    	"label": "Full Image 04 Position Select",
+		"options":
+    		[
+			{ "value": "left top", "label": "left top" },
+			{ "value": "left center", "label": "left center" },
+			{ "value": "left", "label": "left bottom" },
+			{ "value": "right top", "label": "right top" },
+			{ "value": "right center", "label": "right center" },
+			{ "value": "right bottom", "label": "right bottom" },
+			{ "value": "center top", "label": "center top" },
+			{ "value": "center center", "label": "center center" },
+			{ "value": "center bottom", "label": "center bottom" }			
+			]
+   		},
+		{
+     	"type": "image_picker",
+     	"id": "icon-image",
+     	"label": "Icon Image"
+        },
+		{
+     	"type": "image_picker",
+     	"id": "accessories-image",
+     	"label": "Accessories Image"
+        },
+		{
+     	"type": "text",
+     	"id": "button-text-01",
+     	"label": "Button Text 01"
+   		},
+		{
+     	"type": "text",
+     	"id": "large-text-01",
+     	"label": "Large Text 01"
+   		},
+		{
+     	"type": "text",
+     	"id": "large-text-02",
+     	"label": "Large Text 02"
+   		},
+		{
+     	"type": "text",
+     	"id": "large-text-03",
+     	"label": "Large Text 03"
+   		},
+		{
+     	"type": "textarea",
+     	"id": "small-text-01",
+     	"label": "Small Text 01"
+   		},
+		{
+     	"type": "textarea",
+     	"id": "small-text-02",
+     	"label": "Small Text 02"
+   		},
+		{
+     	"type": "textarea",
+     	"id": "small-text-03",
+     	"label": "Small Text 03"
+   		},
+		{
+     	"type": "textarea",
+     	"id": "small-text-04",
+     	"label": "Small Text 04"
+   		},
+		{
+     	"type": "textarea",
+     	"id": "small-text-05",
+     	"label": "Small Text 05"
+   		},
+		{
+     	"type": "text",
+     	"id": "small-content-01",
+     	"label": "Small Table Content 01"
+   		},
+		{
+     	"type": "text",
+     	"id": "small-content-02",
+     	"label": "Small Table Content 02"
+   		},
+		{
+     	"type": "text",
+     	"id": "small-content-03",
+     	"label": "Small Table Content 03"
+   		},
+		{
+     	"type": "text",
+     	"id": "small-content-04",
+     	"label": "Small Table Content 04"
+   		},
+		{
+     	"type": "text",
+     	"id": "small-content-05",
+     	"label": "Small Table Content 05"
+   		},
+		{
+     	"type": "text",
+     	"id": "small-content-06",
+     	"label": "Small Table Content 06"
+   		},
+		{
+     	"type": "text",
+     	"id": "small-content-07",
+     	"label": "Small Table Content 07"
+   		},
+		{
+     	"type": "text",
+     	"id": "small-content-08",
+     	"label": "Small Table Content 08"
+   		},
+		{
+     	"type": "text",
+     	"id": "small-content-09",
+     	"label": "Small Table Content 09"
+   		},
+		{
+     	  "type": "color",
+   	 	  "id": "full-color-01",
+   	 	  "label": "Color Full 01"
+   		},
+		{
+     	  "type": "color",
+   	 	  "id": "full-color-02",
+   	 	  "label": "Color Full 02"
+   		}
+	]
+  }
+{% endschema %}
