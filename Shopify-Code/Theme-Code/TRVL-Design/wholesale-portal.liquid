@@ -1,0 +1,244 @@
+{%- comment -%}
+Modified this page to be accessed by wholesalers only. The client has collections that are available only to wholesale customers.
+This was due to how the client wanted a wholesale only portion of the website. This gives the wholesale user that feeling of exclusivity.
+{%- endcomment -%}}
+
+<div class="page-width page-content" data-aos>
+
+  {% if section.settings.title_enable %}
+    <header class="section-header appear-delay">
+      <h1 class="section-header__title">
+        {{ 'collections.general.catalog_title' | t }}
+      </h1>
+    </header>
+  {% endif %}
+
+  {%- assign blocks = section.blocks | sort: 'collection.all_products_count' -%}
+  
+{% if customer.tags contains 'Wholesaler' %}
+  <div class="skrim-grid appear-delay-1">
+    {% if section.settings.display_type == 'all' %}
+      {% case section.settings.sort %}
+        {% when 'products_high' or 'products_low' %}
+          {%- assign collections = collections | sort: 'all_products_count' -%}
+        {% when 'date' or 'date_reversed' %}
+          {%- assign collections = collections | sort: 'published_at' -%}
+      {% endcase %}
+      {% if section.settings.sort == 'products_low' or section.settings.sort == 'date' or section.settings.sort == 'alphabetical' %}
+        {% for collection in collections %}
+          {% if customer.tags contains 'Wholesaler' %}
+          		{% if collection.handle contains 'wholesale' %}
+            		{% include 'collection-grid-item' %}
+          		{% else %}
+          			{% include 'collection-grid-item' %}
+          		{% endif %}
+          	{% else %}
+          		{% if collection.handle contains 'wholesale' %}
+          		{% else %}
+          			{% include 'collection-grid-item' %}
+          		{% endif %}
+          	{% endif %}
+        {% endfor %}
+      {% else %}
+        {% for collection in collections reversed %}
+          {% if customer.tags contains 'Wholesaler' %}
+          		{% if collection.handle contains 'wholesale' %}
+            		{% include 'collection-grid-item' %}
+          		{% else %}
+          			{% include 'collection-grid-item' %}
+          		{% endif %}
+          	{% else %}
+          		{% if collection.handle contains 'wholesale' %}
+          		{% else %}
+          			{% include 'collection-grid-item' %}
+          		{% endif %}
+          	{% endif %}
+        {% endfor %}
+      {% endif %}
+    {% else %}
+      {% for block in section.blocks %}
+        {%- assign collection = collections[block.settings.collection] -%}
+          {% if customer.tags contains 'Wholesaler' %}
+          		{% if collection.handle contains 'wholesale' %}
+            		{% include 'collection-grid-item' %}
+          		{% else %}
+          			{% include 'collection-grid-item' %}
+          		{% endif %}
+          	{% else %}
+          		{% if collection.handle contains 'wholesale' %}
+          		{% else %}
+          			{% include 'collection-grid-item' %}
+          		{% endif %}
+          	{% endif %}
+      {% endfor %}
+    {% endif %}
+  </div>
+  {% else %}
+    <div class="grid">
+
+    <div class="grid__item medium-up--one-third medium-up--push-one-third">
+
+      <header class="section-header">
+        <h1 class="section-header__title">
+          {{ 'customer.login.title' | t }}
+        </h1>
+      </header>
+
+      <div class="note note--success hide" id="ResetSuccess">
+        {{ 'customer.recover_password.success' | t }}
+      </div>
+
+      <div id="CustomerLoginForm" class="form-vertical">
+        {% form 'customer_login' %}
+		  <input type="hidden" name="checkout_url" value="/collections" />
+          {{ form.errors | default_errors }}
+
+          <label for="CustomerEmail">{{ 'customer.login.email' | t }}</label>
+          <input type="email" name="customer[email]" id="CustomerEmail" class="input-full{% if form.errors contains 'email' %} error{% endif %}" autocapitalize="off" autofocus>
+
+          {% if form.password_needed %}
+          <div class="grid">
+            <div class="grid__item one-half">
+              <label for="CustomerPassword">{{ 'customer.login.password' | t }}</label>
+            </div>
+            <div class="grid__item one-half text-right">
+              <small class="label-info">
+                <a href="#recover" id="RecoverPassword" class="js-no-transition">
+                  {{ 'customer.login.forgot_password' | t }}
+                </a>
+              </small>
+            </div>
+          </div>
+          <input type="password" value="" name="customer[password]" id="CustomerPassword" class="input-full{% if form.errors contains 'password' %} error{% endif %}">
+          {% endif %}
+
+          <p>
+            <input type="submit" class="btn btn--full" value="{{ 'customer.login.sign_in' | t }}">
+          </p>
+          <p>{{ 'layout.customer.create_account' | t | customer_register_link }}</p>
+
+        {% endform %}
+      </div>
+
+      <div id="RecoverPasswordForm" class="hide">
+
+        <h2>{{ 'customer.recover_password.title' | t }}</h2>
+        <p>{{ 'customer.recover_password.subtext' | t }}</p>
+
+
+        <div class="form-vertical">
+          {% form 'recover_customer_password' %}
+
+            {{ form.errors | default_errors }}
+
+            {% if form.posted_successfully? %}
+              <span class="hide reset-password-success"></span>
+            {% endif %}
+
+            <label for="RecoverEmail">{{ 'customer.recover_password.email' | t }}</label>
+            <input type="email" value="" name="email" id="RecoverEmail" class="input-full" autocapitalize="off">
+
+            <p>
+              <input type="submit" class="btn" value="{{ 'customer.recover_password.submit' | t }}">
+            </p>
+            <button type="button" id="HideRecoverPasswordLink">{{ 'customer.recover_password.cancel' | t }}</button>
+          {% endform %}
+        </div>
+
+      </div>
+
+      {% if shop.checkout.guest_login %}
+        <hr class="hr--clear">
+
+        <h1>{{ 'customer.login.guest_title' | t }}</h1>
+        <hr class="hr--small">
+
+        {% form 'guest_login' %}
+          <input type="submit" class="btn" value="{{ 'customer.login.guest_continue' | t }}">
+        {% endform %}
+      {% endif %}
+
+    </div>
+  </div>
+  {% endif %}
+</div>
+
+{% schema %}
+  {
+    "name": "Collections list page",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "title_enable",
+        "label": "Show title",
+        "default": true
+      },
+      {
+        "type": "paragraph",
+        "content": "All of your collections are listed by default. To customize your list, choose 'Selected' and add collections."
+      },
+      {
+        "type": "radio",
+        "id": "display_type",
+        "label": "Select collections to show",
+        "default": "all",
+        "options": [
+          {
+            "value": "all",
+            "label": "All"
+          },
+          {
+            "value": "selected",
+            "label": "Selected"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "sort",
+        "label": "Sort collections by:",
+        "info": "Sorting only applies when 'All' is selected",
+        "default": "alphabetical",
+        "options": [
+          {
+            "value": "products_high",
+            "label": "Product count, high to low"
+          },
+          {
+            "value": "products_low",
+            "label": "Product count, low to high"
+          },
+          {
+            "value": "alphabetical",
+            "label": "Alphabetically, A-Z"
+          },
+          {
+            "value": "alphabetical_reversed",
+            "label": "Alphabetically, Z-A"
+          },
+          {
+            "value": "date",
+            "label": "Date, old to new"
+          },
+          {
+            "value": "date_reversed",
+            "label": "Date, new to old"
+          }
+        ]
+      }
+    ],
+    "blocks": [
+      {
+        "type": "collection",
+        "name": "Collection",
+        "settings": [
+          {
+            "label": "Collection",
+            "id": "collection",
+            "type": "collection"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
