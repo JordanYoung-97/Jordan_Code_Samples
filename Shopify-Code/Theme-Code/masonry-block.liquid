@@ -1,0 +1,845 @@
+<style>
+/*building-block */
+  
+.building-container{
+  width: 100vw;
+  padding: 50px;
+}
+  
+.f-b-container{
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 50vw;
+  max-height: 675px;
+  min-height: 350px;
+  margin-bottom: 15px;
+  padding: 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: {{section.settings.text-justify-full}};
+  -ms-flex-pack: start;
+  justify-content: {{section.settings.text-justify-full}};
+  -webkit-box-align: end;
+  -webkit-align-items: {{section.settings.text-align-full}};
+  -ms-flex-align: end;
+  align-items: {{section.settings.text-align-full}};
+  background-image: url('{{section.settings.image-full | img_url: "2048x"}}');
+  background-position: {{section.settings.image-position-full}};
+  background-size: cover;
+  background-repeat: no-repeat; 
+}
+  
+.f-b-container02{
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 50vw;
+  max-height: 675px;
+  min-height: 350px;
+  margin-top: 15px;
+  padding: 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: {{section.settings.text-justify-full02}};
+  -ms-flex-pack: start;
+  justify-content: {{section.settings.text-justify-full02}};
+  -webkit-box-align: end;
+  -webkit-align-items: {{section.settings.text-align-full02}};
+  -ms-flex-align: end;
+  align-items: {{section.settings.text-align-full02}};
+  background-image: url('{{section.settings.image-full02 | img_url: "2048x"}}');
+  background-position: {{section.settings.image-position-full02}};
+  background-size: cover;
+  background-repeat: no-repeat; 
+}
+  
+.t-container-full{
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flext-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: end;
+  -webkit-align-items: {{section.settings.text-align-full}};
+  -ms-flex-align: end;
+  align-items: {{section.settings.text-align-full}};
+  color: {{section.settings.text-color-full}};
+  
+}
+  
+  .t-container-full02{
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flext-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: end;
+  -webkit-align-items: {{section.settings.text-align-full02}};
+  -ms-flex-align: end;
+  align-items: {{section.settings.text-align-full02}};
+  color: {{section.settings.text-color-full02}};
+  
+}
+  
+.b-container-left{
+  position: relative;
+  width: 50%;
+  height: 35vw;
+  max-height: 450px;
+  min-height: 300px;
+  margin-right: 7.5px;
+  padding: 30px;
+  background-image: url('{{section.settings.image-left | img_url: '2048x'}}');
+  background-position: {{section.settings.image-position-left}};
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: {{section.settings.text-justify-left}};
+  -ms-flex-pack: start;
+  justify-content: {{section.settings.text-justify-left}};
+  -webkit-box-align: end;
+  -webkit-align-items: {{section.settings.text-align-left}};
+  -ms-flex-align: end;
+  align-items: {{section.settings.text-align-left}};
+}
+  
+.t-container-left{
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: end;
+  -webkit-align-items: {{section.settings.text-align-left}};
+  -ms-flex-align: end;
+  align-items: {{section.settings.text-align-left}};
+  color: {{section.settings.text-color-left}};
+  
+}
+  
+.b-container-right{
+  position: relative;
+  width: 50%;
+  height: 35vw;
+  max-height: 450px;
+  min-height: 300px;
+  margin-left: 7.5px;
+  padding: 30px;
+  background-image: url('{{section.settings.image-right | img_url: '2048x'}}');
+  background-position: {{section.settings.image-position-right}};
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: {{section.settings.text-justify-right}};
+  -ms-flex-pack: start;
+  justify-content: {{section.settings.text-justify-right}};
+  -webkit-box-align: end;
+  -webkit-align-items: {{section.settings.text-align-right}};
+  -ms-flex-align: end;
+  align-items: {{section.settings.text-align-right}};
+  
+}
+  
+.t-container-right{
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: end;
+  -webkit-align-items: {{section.settings.text-align-right}};
+  -ms-flex-align: end;
+  align-items: {{section.settings.text-align-right}};
+  color: {{section.settings.text-color-right}};  
+}
+  
+@media (max-width: 767px) {
+  .f-b-container{
+	-webkit-justify-content: {{section.settings.text-justify-full-mobile}} !important;
+	justify-content: {{section.settings.text-justify-full-mobile}} !important;
+	-webkit-align-items: {{section.settings.text-align-full-mobile}} !important;
+	align-items: {{section.settings.text-align-full-mobile}} !important;
+  }
+  
+  
+  .f-b-container02{
+  	-webkit-justify-content: {{section.settings.text-justify-full02-mobile}} !important;
+  	justify-content: {{section.settings.text-justify-full02-mobile}} !important;
+  	-webkit-align-items: {{section.settings.text-align-full02-mobile}} !important;
+  	align-items: {{section.settings.text-align-full02-mobile}} !important;
+}
+  
+  .b-container-left{
+  	-webkit-justify-content: {{section.settings.text-justify-left-mobile}} !important;
+  	justify-content: {{section.settings.text-justify-left-mobile}} !important;
+  	-webkit-align-items: {{section.settings.text-align-left-mobile}} !important;
+  	align-items: {{section.settings.text-align-left-mobile}} !important;
+}
+  
+  .b-container-right{
+  	-webkit-justify-content: {{section.settings.text-justify-right-mobile}} !important;
+  	justify-content: {{section.settings.text-justify-right-mobile}} !important;
+  	-webkit-align-items: {{section.settings.text-align-right-mobile}} !important;
+  	align-items: {{section.settings.text-align-right-mobile}} !important;
+}
+  
+.t-container-right{
+  -webkit-align-items: {{section.settings.text-align-right-mobile}};
+  align-items: {{section.settings.text-align-right-mobile}};
+}
+.t-container-full02{
+  -webkit-align-items: {{section.settings.text-align-full02-mobile}};
+  align-items: {{section.settings.text-align-full02-mobile}};
+}
+.t-container-left{
+  -webkit-align-items: {{section.settings.text-align-left-mobile}};
+  align-items: {{section.settings.text-align-left-mobile}};
+}
+.t-container-full{
+  -webkit-align-items: {{section.settings.text-align-full-mobile}};
+  align-items: {{section.settings.text-align-full-mobile}};
+}
+}
+  
+@media (max-width: 479px) {
+  
+  {% if section.settings.full-mobile-hide %}
+  	.f-b-container{
+     display: none !important; 
+    }
+  
+  {%else%}
+  	.f-b-container{
+     display: flex; 
+    }
+  {%endif%}
+  
+  {% if section.settings.left-mobile-hide %}
+  	.b-container-left{
+     display: none !important; 
+    }
+  
+  {%else%}
+  	.b-container-left{
+     display: flex; 
+    }
+  {%endif%}
+  
+  {% if section.settings.right-mobile-hide %}
+  	.b-container-right{
+     display: none !important; 
+    }
+  
+  {%else%}
+  	.b-container-right{
+     display: flex; 
+    }
+  {%endif%}
+  
+  {% if section.settings.bottom-mobile-hide %}
+  	.f-b-container02{
+     display: none !important; 
+    }
+  
+  {%else%}
+  	.f-b-container02{
+     display: flex; 
+    }
+  {%endif%}
+  
+ .f-b-container{
+   background-image: url('{{section.settings.image-full-mobile | img_url: '2048x'}}');
+ }
+  .f-b-container02{
+   background-image: url('{{section.settings.image-full02-mobile | img_url: '2048x'}}');
+ }
+ .b-container-left{
+   background-image: url('{{section.settings.image-left-mobile | img_url: '2048x'}}');
+ }
+ .b-container-right{
+   background-image: url('{{section.settings.image-right-mobile | img_url: '2048x'}}');
+ }
+}
+</style>
+<div class="building-container">
+  <div class="f-b-container" style="">
+    <div class="t-container-full">
+      <div class="b-text-small" style="{%if section.settings.shadow-full %}text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);{% endif %}">{{section.settings.text-small-full}}</div>
+      <div class="b-text-large" style="{%if section.settings.shadow-full %}text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);{% endif %}{% if section.settings.text-align-full == 'flex-end' %}text-align:right; {% else %}text-align:left;{%endif %}">{{section.settings.text-large-full}}</div>
+      <a class="building-btn" href="{{section.settings.btn-link-full}}" {% if section.settings.btn-target-full != false %} target="_blank" {%else%} {%endif%}>{{section.settings.btn-text-full}}</a>
+    </div>
+  </div>
+  <div class="b-container-d">
+    <div class="b-container-left" style="">
+      <div class="t-container-left">
+        <div class="b-text-small" style="margin-bottom: 20px;{%if section.settings.shadow-left %}text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);{% endif %}">{{section.settings.text-left}}</div>
+        <a class="building-btn" href="{{section.settings.btn-link-left}}" {% if section.settings.btn-target-left != false %} target="_blank" {%else%} {%endif%}>{{section.settings.btn-text-left}}</a>
+      </div>
+    </div>
+    <div class ="b-container-right" style="">
+      <div class="t-container-right">
+        <div class="b-text-small" style="margin-bottom: 20px;{%if section.settings.shadow-right %}text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);{% endif %}">{{section.settings.text-right}}</div>
+        <a class="building-btn" href="{{section.settings.btn-link-right}}" {% if section.settings.btn-target-right != false %} target="_blank" {%else%} {%endif%}>{{section.settings.btn-text-right}}</a>
+      </div>
+    </div>
+  </div>
+  {% if section.settings.enable-full02 != false %}
+  <div class="f-b-container02">
+    <div class="t-container-full02">
+      <div class="b-text-small" style="{%if section.settings.shadow-full02 %}text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);{% endif %}">{{section.settings.text-small-full02}}</div>
+      <div class="b-text-large" style="{%if section.settings.shadow-full02 %}text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);{% endif %}{% if section.settings.text-align-full02 == 'flex-end' %}text-align:right; {% else %}text-align:left;{%endif %}">{{section.settings.text-large-full02}}</div>
+      <a class="building-btn" href="{{section.settings.btn-link-full02}}" {% if section.settings.btn_target-bottom != false %} target="_blank" {%else%} {%endif%}>{{section.settings.btn-text-full02}}</a>
+    </div>
+  </div>
+  {% endif %}
+</div>
+
+
+
+
+{% schema %}
+{
+  "name": "Masonry-element",
+  "settings": [
+		{
+			"type": "header",
+			"content": "Top Tile Settings"
+		},
+		{
+          "type": "text",
+          "id": "text-large-full",
+          "label": "Heading Text"
+        },
+        {
+          "type": "text",
+          "id": "text-small-full",
+          "label": "Body Text"
+        },
+        {
+          "type": "text",
+          "id": "btn-text-full",
+          "label": "Button Text"
+        },
+   		{
+     	  "type": "url",
+   	 	  "id": "btn-link-full",
+   	 	  "label": "Button Link"
+   		},
+		{
+		  "type": "checkbox",
+		  "id": "btn-target-full",
+		  "default": false,
+		  "label": "Open In New Tab"
+		},
+   		{
+     	  "type": "color",
+   	 	  "id": "text-color-full",
+   	 	  "label": "Text Color"
+   		},
+  		{
+	 		"type": "checkbox",
+	 		"id": "shadow-full",
+	 		"default": false,
+	 		"label": "Enable Text Shadow"
+   		},
+   		{
+   			"type": "select",
+			"id": "text-align-full",
+    		"label": "Text Horizontal Position",
+			"options":
+    			[
+				{ "value": "flex-start", "label": "left" },
+				{ "value": "center", "label": "center" },
+				{ "value": "flex-end", "label": "right" }			
+				]
+   		},
+   		{
+   			"type": "select",
+			"id": "text-justify-full",
+    		"label": "Text Vertical Position",
+			"options":
+    			[
+				{ "value": "flex-start", "label": "top" },
+				{ "value": "center", "label": "center" },
+				{ "value": "flex-end", "label": "bottom" }			
+				]
+   		},
+   		{
+   			"type": "select",
+			"id": "text-align-full-mobile",
+    		"label": "Text Horizontal Position - Mobile",
+			"options":
+    			[
+				{ "value": "flex-start", "label": "left" },
+				{ "value": "center", "label": "center" },
+				{ "value": "flex-end", "label": "right" }			
+				]
+   		},
+   		{
+   			"type": "select",
+			"id": "text-justify-full-mobile",
+    		"label": "Text Vertical Position - Mobile",
+			"options":
+    			[
+				{ "value": "flex-start", "label": "top" },
+				{ "value": "center", "label": "center" },
+				{ "value": "flex-end", "label": "bottom" }			
+				]
+   		},
+        {
+          "type": "image_picker",
+          "id": "image-full",
+          "label": "Desktop Image - Responsive Width"
+        },
+        {
+          "type": "image_picker",
+          "id": "image-full-mobile",
+          "label": "Mobile Image - 10:16"
+        },
+  		{
+	 		"type": "checkbox",
+	 		"id": "full-mobile-hide",
+	 		"default": false,
+	 		"label": "Hide Tile for Mobile"
+   		},
+   		{
+   			"type": "select",
+			"id": "image-position-full",
+    		"label": "Image Position",
+			"options":
+    			[
+				{ "value": "left top", "label": "left top" },
+				{ "value": "left center", "label": "left center" },
+				{ "value": "left", "label": "left bottom" },
+				{ "value": "right top", "label": "right top" },
+				{ "value": "right center", "label": "right center" },
+				{ "value": "right bottom", "label": "right bottom" },
+				{ "value": "center top", "label": "center top" },
+				{ "value": "center center", "label": "center center" },
+				{ "value": "center bottom", "label": "center bottom" }			
+				]
+   		},
+        {
+			"type": "header",
+			"content": "Center Left Settings"
+		},
+        {
+          "type": "text",
+          "id": "text-left",
+          "label": "Body Text"
+        },
+        {
+          "type": "text",
+          "id": "btn-text-left",
+          "label": "Button Text"
+        },
+   		{
+     	  "type": "url",
+   	 	  "id": "btn-link-left",
+   	 	  "label": "Button Link"
+   		},
+		{
+		  "type": "checkbox",
+		  "id": "btn-target-left",
+		  "default": false,
+		  "label": "Open In New Tab"
+		},
+   		{
+     	  "type": "color",
+   	 	  "id": "text-color-left",
+   	 	  "label": "Text Color"
+   		},
+   		{
+	 		"type": "checkbox",
+	 		"id": "shadow-left",
+	 		"default": false,
+	 		"label": "Enable Text Shadow"
+   		},
+  		{
+   			"type": "select",
+			"id": "text-align-left",
+    		"label": "Text Horizontal Position",
+			"options":
+    			[
+				{ "value": "flex-start", "label": "left" },
+				{ "value": "center", "label": "center" },
+				{ "value": "flex-end", "label": "right" }			
+				]
+   		},
+   		{
+   			"type": "select",
+			"id": "text-justify-left",
+    		"label": "Text Vertical Position",
+			"options":
+    			[
+				{ "value": "flex-start", "label": "top" },
+				{ "value": "center", "label": "center" },
+				{ "value": "flex-end", "label": "bottom" }			
+				]
+   		},
+  		{
+   			"type": "select",
+			"id": "text-align-left-mobile",
+    		"label": "Text Horizontal Position - Mobile",
+			"options":
+    			[
+				{ "value": "flex-start", "label": "left" },
+				{ "value": "center", "label": "center" },
+				{ "value": "flex-end", "label": "right" }			
+				]
+   		},
+   		{
+   			"type": "select",
+			"id": "text-justify-left-mobile",
+    		"label": "Text Vertical Position - Mobile",
+			"options":
+    			[
+				{ "value": "flex-start", "label": "top" },
+				{ "value": "center", "label": "center" },
+				{ "value": "flex-end", "label": "bottom" }			
+				]
+   		},
+        {
+          "type": "image_picker",
+          "id": "image-left",
+          "label": "Desktop Image - Responsive Width"
+        },
+        {
+          "type": "image_picker",
+          "id": "image-left-mobile",
+          "label": "Mobile Image - 10:16"
+        },
+  		{
+	 		"type": "checkbox",
+	 		"id": "left-mobile-hide",
+	 		"default": false,
+	 		"label": "Hide Tile for Mobile"
+   		},
+   		{
+   			"type": "select",
+			"id": "image-position-left",
+    		"label": "Image Position",
+			"options":
+    			[
+				{ "value": "left top", "label": "left top" },
+				{ "value": "left center", "label": "left center" },
+				{ "value": "left", "label": "left bottom" },
+				{ "value": "right top", "label": "right top" },
+				{ "value": "right center", "label": "right center" },
+				{ "value": "right bottom", "label": "right bottom" },
+				{ "value": "center top", "label": "center top" },
+				{ "value": "center center", "label": "center center" },
+				{ "value": "center bottom", "label": "center bottom" }			
+				]
+   		},
+        {
+			"type": "header",
+			"content": "Center Right Settings"
+		},
+        {
+          "type": "text",
+          "id": "text-right",
+          "label": "Body Text"
+        },
+        {
+          "type": "text",
+          "id": "btn-text-right",
+          "label": "Button Text"
+        },
+   		{
+     	  "type": "url",
+   	 	  "id": "btn-link-right",
+   	 	  "label": "Button Link"
+   		},
+		{
+		  "type": "checkbox",
+		  "id": "btn-target-right",
+		  "default": false,
+		  "label": "Open In New Tab"
+		},
+   		{
+     	  "type": "color",
+   	 	  "id": "text-color-right",
+   	 	  "label": "Text Color"
+   		},
+   		{
+	 		"type": "checkbox",
+	 		"id": "shadow-right",
+	 		"default": false,
+	 		"label": "Enable Text Shadow"
+   		},
+   		{
+   			"type": "select",
+			"id": "text-align-right",
+    		"label": "Text Horizontal Position",
+			"options":
+    			[
+				{ "value": "flex-start", "label": "left" },
+				{ "value": "center", "label": "center" },
+				{ "value": "flex-end", "label": "right" }			
+				]
+   		},
+   		{
+   			"type": "select",
+			"id": "text-justify-right",
+    		"label": "Text Vertical Position",
+			"options":
+    			[
+				{ "value": "flex-start", "label": "top" },
+				{ "value": "center", "label": "center" },
+				{ "value": "flex-end", "label": "bottom" }			
+				]
+   		},
+   		{
+   			"type": "select",
+			"id": "text-align-right-mobile",
+    		"label": "Text Horizontal Position - Mobile",
+			"options":
+    			[
+				{ "value": "flex-start", "label": "left" },
+				{ "value": "center", "label": "center" },
+				{ "value": "flex-end", "label": "right" }			
+				]
+   		},
+   		{
+   			"type": "select",
+			"id": "text-justify-right-mobile",
+    		"label": "Text Vertical Position - Mobile",
+			"options":
+    			[
+				{ "value": "flex-start", "label": "top" },
+				{ "value": "center", "label": "center" },
+				{ "value": "flex-end", "label": "bottom" }			
+				]
+   		},
+        {
+          "type": "image_picker",
+          "id": "image-right",
+          "label": "Desktop Image - Responsive Width"
+        },
+        {
+          "type": "image_picker",
+          "id": "image-right-mobile",
+          "label": "Mobile Image - 10:16"
+        },
+  		{
+	 		"type": "checkbox",
+	 		"id": "right-mobile-hide",
+	 		"default": false,
+	 		"label": "Hide Tile for Mobile"
+   		},
+   		{
+   			"type": "select",
+			"id": "image-position-right",
+    		"label": "Image Position",
+			"options":
+    			[
+				{ "value": "left top", "label": "left top" },
+				{ "value": "left center", "label": "left center" },
+				{ "value": "left", "label": "left bottom" },
+				{ "value": "right top", "label": "right top" },
+				{ "value": "right center", "label": "right center" },
+				{ "value": "right bottom", "label": "right bottom" },
+				{ "value": "center top", "label": "center top" },
+				{ "value": "center center", "label": "center center" },
+				{ "value": "center bottom", "label": "center bottom" }			
+				]
+   		},
+        {
+			"type": "header",
+			"content": "Bottom Tile Settings"
+		},
+		{
+	 		"type": "checkbox",
+	 		"id": "enable-full02",
+	 		"default": false,
+	 		"label": "Enable Bottom Tile"
+   		},
+		{
+          "type": "text",
+          "id": "text-large-full02",
+          "label": "Heading Text"
+        },
+        {
+          "type": "text",
+          "id": "text-small-full02",
+          "label": "Body Text"
+        },
+        {
+          "type": "text",
+          "id": "btn-text-full02",
+          "label": "Button Text"
+        },
+   		{
+     	  "type": "url",
+   	 	  "id": "btn-link-full02",
+   	 	  "label": "Button Link"
+   		},
+		{
+		  "type": "checkbox",
+		  "id": "btn-target-bottom",
+		  "default": false,
+		  "label": "Open In New Tab"
+		},
+		{
+     	  "type": "color",
+   	 	  "id": "text-color-full02",
+   	 	  "label": "Text Color"
+   		},
+		{
+	 		"type": "checkbox",
+	 		"id": "shadow-full02",
+	 		"default": false,
+	 		"label": "Enable Text Shadow"
+   		},
+		{
+   			"type": "select",
+			"id": "text-align-full02",
+    		"label": "Text Horizontal Position",
+			"options":
+    			[
+				{ "value": "flex-start", "label": "left" },
+				{ "value": "center", "label": "center" },
+				{ "value": "flex-end", "label": "right" }			
+				]
+   		},
+		{
+   			"type": "select",
+			"id": "text-justify-full02",
+    		"label": "Text Vertical Position",
+			"options":
+    			[
+				{ "value": "flex-start", "label": "top" },
+				{ "value": "center", "label": "center" },
+				{ "value": "flex-end", "label": "bottom" }			
+				]
+   		},
+		{
+   			"type": "select",
+			"id": "text-align-full02-mobile",
+    		"label": "Text Horizontal Position - Mobile",
+			"options":
+    			[
+				{ "value": "flex-start", "label": "left" },
+				{ "value": "center", "label": "center" },
+				{ "value": "flex-end", "label": "right" }			
+				]
+   		},
+		{
+   			"type": "select",
+			"id": "text-justify-full02-mobile",
+    		"label": "Text Vertical Position - Mobile",
+			"options":
+    			[
+				{ "value": "flex-start", "label": "top" },
+				{ "value": "center", "label": "center" },
+				{ "value": "flex-end", "label": "bottom" }			
+				]
+   		},
+		{
+          "type": "image_picker",
+          "id": "image-full02",
+          "label": "Desktop Image - Responsive Width"
+        },
+        {
+          "type": "image_picker",
+          "id": "image-full02-mobile",
+          "label": "Mobile Image - 10:16"
+        },
+  		{
+	 		"type": "checkbox",
+	 		"id": "bottom-mobile-hide",
+	 		"default": false,
+	 		"label": "Hide Tile for Mobile"
+   		},
+		{
+   			"type": "select",
+			"id": "image-position-full02",
+    		"label": "Image Position",
+			"options":
+    			[
+				{ "value": "left top", "label": "left top" },
+				{ "value": "left center", "label": "left center" },
+				{ "value": "left", "label": "left bottom" },
+				{ "value": "right top", "label": "right top" },
+				{ "value": "right center", "label": "right center" },
+				{ "value": "right bottom", "label": "right bottom" },
+				{ "value": "center top", "label": "center top" },
+				{ "value": "center center", "label": "center center" },
+				{ "value": "center bottom", "label": "center bottom" }			
+				]
+   		}   
+  ],
+  "presets": [
+    {
+      "name": "Building Block",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}

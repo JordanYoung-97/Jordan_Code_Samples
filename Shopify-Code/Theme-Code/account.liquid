@@ -1,0 +1,364 @@
+<!-- /templates/customers/account.liquid -->
+
+<!-- NEW DEVELOPMENT -->
+  <div class="ac-page-container">
+    <div class="ac-header">
+      <div class="header-text">Hello, {{customer.first_name}}</div><a  href = "/account/logout" class="log-out">LOG OUT</a></div>
+    <div class="ac-address">
+      <div class="ac-address-container mobile-off">
+        <div class="medium-text m-bot-50">Account Details</div>
+    	<p>{{ customer.name }}<br>
+      	{% if customer.default_address != nil %}
+        {{ customer.default_address.address1 }}<br>
+        {% if customer.default_address.address2 != "" %}
+          {{ customer.default_address.address2 }}<br>
+        {% endif %}
+        {% if customer.default_address.city != "" %}
+          {{ customer.default_address.city }}<br>
+        {% endif %}
+        {% if customer.default_address.province_code != nil %}
+          {{ customer.default_address.province_code | upcase }}<br>
+        {% endif %}
+        {% if customer.default_address.zip != "" %}
+          {{ customer.default_address.zip | upcase }}<br>
+        {% endif %}
+        {% if customer.default_address.country != "" %}
+          {{ customer.default_address.country }}<br>
+        {% endif %}
+        {% if customer.default_address.phone != "" %}
+          {{ customer.default_address.phone }}
+        {% endif %}
+      	</p>
+    	{% endif %}
+        <div class="building-button">
+          <div class="center-text white"><a style="color: white;" href="/account/addresses">{{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})</a></div>
+        </div>
+      </div>
+      <div class="ac-vip-container">
+        <div class="vip-top">
+          <div class="medium-text">You Are In Level {% if customer.tags contains 'VIP03' or customer.tags contains 'VIP03-INT' %}
+                                                      	3: <span style="color: #2ECE41; font-size: 18px; font-weight: 600;"> Full Speed </span>
+            										{% elsif customer.tags contains 'VIP02' or customer.tags contains 'VIP02-INT' %}
+            											2: <span style="color: #F4A93B; font-size: 18px; font-weight: 600;"> Cruising </span>
+            										{% elsif customer.tags contains 'VIP01' or customer.tags contains 'VIP01-INT' %}
+            											1: <span style="color: red; font-size: 18px; font-weight: 600;"> Revving Up </span>
+            										{% else %}
+            											0
+            										{% endif %} </div>
+          <div class="small-text">Lifetime Spent: {{customer.total_spent | money}}</div>
+        </div>
+        <div class="vip-bottom">
+          
+          <img {% if customer.tags contains 'VIP02'%}
+               	style="opacity: 0.25;"
+               {% elsif customer.tags contains 'VIP01'%}
+               	style="opacity: 1.0;"
+               {% endif %} 
+               
+               
+               {% if customer.tags contains 'VIP02-INT'%}
+               	style="opacity: 0.25;"
+               {% elsif customer.tags contains 'VIP01-INT'%}
+               	style="opacity: 1.0;"
+               {% endif %} 
+               src="{{ "vip-1.svg" | asset_url }}" alt="" class="vip-svg">
+          
+          <img {% if customer.tags contains 'VIP03' and customer.tags contains 'VIP01'%}
+               	style="opacity: 0.25;"
+               {% elsif  customer.tags contains 'VIP02' and customer.tags contains 'VIP01' %}
+               	style="opacity: 1.0;"
+               {% endif %} 
+               
+               {% if customer.tags contains 'VIP03-INT' and customer.tags contains 'VIP01-INT'%}
+               	style="opacity: 0.25;"
+               {% elsif  customer.tags contains 'VIP02-INT' and customer.tags contains 'VIP01-INT' %}
+               	style="opacity: 1.0;"
+               {% endif %} 
+               src="{{ "vip-2.svg" | asset_url }}" alt="" class="vip-svg">
+          
+          <img {% if customer.tags contains 'VIP03' or customer.tags contains 'VIP03-INT'%}
+               	style="opacity: 1.0;"
+               {% elsif customer.tags contains 'VIP02' or customer.tags contains 'VIP02-INT' or customer.tags contains 'VIP01-INT' or customer.tags contains 'VIP01' %}
+               	style="opacity: 0.25;"
+               {% endif %} 
+               src="{{ "vip-3.svg" | asset_url }}" alt="" class="vip-svg">
+        </div>
+      </div>
+    </div>
+    <div class="ac-table mobile-off">
+      <div class="tb-header">
+        <div class="th-text">Lifetime Spent</div>
+        <div class="th-text _20 w-embed">
+          <div>level 1 - $300<br><span style="color: red; font-size: 18px; font-weight: 600;">Revving Up</span></div>
+        </div>
+        <div class="th-text _20 w-embed">
+          <div>level 2 - $600<br><span style="color: #F4A93B; font-size: 18px; font-weight: 600;">Cruising</span></div>
+        </div>
+        <div class="th-text _20 w-embed">
+          <div>level 3 - $1000<br><span style="color: #2ECE41; font-size: 18px; font-weight: 600;">Full Speed</span></div>
+        </div>
+      </div>
+      <div class="tb-header padding-top">
+        <div class="th-text light">Free Shipping (Domestic Only)</div>
+        <div class="th-text _20">
+          <div class="diamond"></div>
+        </div>
+        <div class="th-text _20">
+          <div class="diamond"></div>
+        </div>
+        <div class="th-text _20">
+          <div class="diamond"></div>
+        </div>
+      </div>
+      <div class="tb-header padding-top">
+        <div class="th-text light">Early Access to New Product, Sales, and Back-In-Stock</div>
+        <div class="th-text _20">
+          <div class="diamond"></div>
+        </div>
+        <div class="th-text _20">
+          <div class="diamond"></div>
+        </div>
+        <div class="th-text _20">
+          <div class="diamond"></div>
+        </div>
+      </div>
+      <div class="tb-header padding-top">
+        <div class="th-text light">Birthday Month Gift</div>
+        <div class="th-text _20"></div>
+        <div class="th-text _20">
+          <div class="diamond"></div>
+        </div>
+        <div class="th-text _20">
+          <div class="diamond"></div>
+        </div>
+      </div>
+      <div class="tb-header padding-top">
+        <div class="th-text light">10% Off All Orders</div>
+        <div class="th-text _20"></div>
+        <div class="th-text _20">
+          <div class="diamond"></div>
+        </div>
+        <div class="th-text _20"></div>
+      </div>
+      <div class="tb-header padding-top">
+        <div class="th-text light">20% Off All Orders</div>
+        <div class="th-text _20"></div>
+        <div class="th-text _20"></div>
+        <div class="th-text _20">
+          <div class="diamond"></div>
+        </div>
+      </div>
+      <div class="tb-header padding-top">
+        <div class="th-text light">Candylab Office Tour Next Time You Are in NYC</div>
+        <div class="th-text _20"></div>
+        <div class="th-text _20"></div>
+        <div class="th-text _20">
+          <div class="diamond"></div>
+        </div>
+      </div>
+      <div class="tb-header padding-top">
+        <div class="th-text light">Holiday Gift Wrap</div>
+        <div class="th-text _20"></div>
+        <div class="th-text _20"></div>
+        <div class="th-text _20">
+          <div class="diamond"></div>
+        </div>
+      </div>
+      {% if customer.tags contains 'VIP03' or customer.tags contains 'VIP03-INT' %}
+      <div class="highlight green"></div>
+      {% elsif customer.tags contains 'VIP02' or customer.tags contains 'VIP02-INT'%}
+      <div class="highlight yellow"></div>
+      {% elsif customer.tags contains 'VIP01' or customer.tags contains 'VIP01-INT'%}
+      <div class="highlight"></div>
+      {% endif %}
+    </div>
+    
+    <!-- changes -->
+    {% if customer.tags contains 'VIP03' or customer.tags contains 'VIP03-INT' %}
+    <div class="medium-text mobile-on">Your Rewards</div>
+    <div class="ac-table green-mobile">
+      <div class="tb-header">
+        <div class="th-text">Lifetime Spend</div>
+        <div class="th-text _20 w-embed">
+          <div>level 3 - $1000<br><span style="color: #2ECE41; font-size: 18px; font-weight: 600;">FULL SPEED</span></div>
+        </div>
+      </div>
+      <div class="tb-header padding-top">
+        <div class="th-text light">Free Shipping (Domestic Only)</div>
+        <div class="th-text _20">
+          <div class="diamond"></div>
+        </div>
+      </div>
+      <div class="tb-header padding-top">
+        <div class="th-text light">Early Access to New Product, Sales, and Back-In-Stock</div>
+        <div class="th-text _20">
+          <div class="diamond"></div>
+        </div>
+      </div>
+      <div class="tb-header padding-top">
+        <div class="th-text light">Birthday Month Gift</div>
+        <div class="th-text _20">
+          <div class="diamond"></div>
+        </div>
+      </div>
+      <div class="tb-header padding-top">
+        <div class="th-text light">20% Off All Orders</div>
+        <div class="th-text _20">
+          <div class="diamond"></div>
+        </div>
+      </div>
+      <div class="tb-header padding-top">
+        <div class="th-text light">Candylab Office Tour Next Time You Are in NYC</div>
+        <div class="th-text _20">
+          <div class="diamond"></div>
+        </div>
+      </div>
+      <div class="tb-header padding-top">
+        <div class="th-text light">Holiday Gift Wrap</div>
+        <div class="th-text _20">
+          <div class="diamond"></div>
+        </div>
+      </div>
+      <div class="highlight green"></div>
+    </div>
+    {% elsif customer.tags contains 'VIP02' or customer.tags contains 'VIP02-INT'%}
+    <div class="medium-text mobile-on">Your Rewards</div>
+    <div class="ac-table yellow-mobile">
+      <div class="tb-header">
+        <div class="th-text">Lifetime Spend</div>
+        <div class="th-text _20 w-embed">
+          <div>level 2 - $600<br><span style="color: #F4A93B; font-size: 18px; font-weight: 600;">CRUSIN</span></div>
+        </div>
+      </div>
+      <div class="tb-header padding-top">
+        <div class="th-text light">Free Shipping (Domestic Only)</div>
+        <div class="th-text _20">
+          <div class="diamond"></div>
+        </div>
+      </div>
+      <div class="tb-header padding-top">
+        <div class="th-text light">Early Access to New Product, Sales, and Back-In-Stock</div>
+        <div class="th-text _20">
+          <div class="diamond"></div>
+        </div>
+      </div>
+      <div class="tb-header padding-top">
+        <div class="th-text light">Birthday Month Gift</div>
+        <div class="th-text _20">
+          <div class="diamond"></div>
+        </div>
+      </div>
+      <div class="tb-header padding-top">
+        <div class="th-text light">10% Off All Orders</div>
+        <div class="th-text _20">
+          <div class="diamond"></div>
+        </div>
+      </div>
+      <div class="highlight yellow"></div>
+    </div>
+    {% elsif customer.tags contains 'VIP01' or customer.tags contains 'VIP01-INT'%}
+    <div class="medium-text mobile-on">Your Rewards</div>
+    <div class="ac-table red-mobile">
+      <div class="tb-header">
+        <div class="th-text">Lifetime Spend</div>
+        <div class="th-text _20 w-embed">
+          <div>level 1 - $300<br><span style="color: red; font-size: 18px; font-weight: 600;">REVVING UP</span></div>
+        </div>
+      </div>
+      <div class="tb-header padding-top">
+        <div class="th-text light">Free Shipping (Domestic Only)</div>
+        <div class="th-text _20">
+          <div class="diamond"></div>
+        </div>
+      </div>
+      <div class="tb-header padding-top">
+        <div class="th-text light">Early Access to New Product, Sales, and Back-In-Stock</div>
+        <div class="th-text _20">
+          <div class="diamond"></div>
+        </div>
+      </div>
+      <div class="highlight"></div>
+    </div>
+    {% endif %}
+    
+    <div class="help-text">
+      <div>Have Questions? Please Email us at <a style="color: blue; text-decoration: underline;" href = "toyseller@candylabtoys.com?subject = Rewards Question">toyseller@candylabtoys.com</a></div>
+    </div>
+    
+    <div class="ac-address-container mobile-on">
+        <div class="medium-text m-bot-50">Account Details</div>
+    	<p>{{ customer.name }}<br>
+      	{% if customer.default_address != nil %}
+        {{ customer.default_address.address1 }}<br>
+        {% if customer.default_address.address2 != "" %}
+          {{ customer.default_address.address2 }}<br>
+        {% endif %}
+        {% if customer.default_address.city != "" %}
+          {{ customer.default_address.city }}<br>
+        {% endif %}
+        {% if customer.default_address.province_code != nil %}
+          {{ customer.default_address.province_code | upcase }}<br>
+        {% endif %}
+        {% if customer.default_address.zip != "" %}
+          {{ customer.default_address.zip | upcase }}<br>
+        {% endif %}
+        {% if customer.default_address.country != "" %}
+          {{ customer.default_address.country }}<br>
+        {% endif %}
+        {% if customer.default_address.phone != "" %}
+          {{ customer.default_address.phone }}
+        {% endif %}
+      	</p>
+    	{% endif %}
+        <div class="building-button">
+          <div class="center-text white"><a style="color: white;" href="/account/addresses">{{ 'customer.account.view_addresses' | t }} ({{ customer.addresses_count }})</a></div>
+        </div>
+      </div>
+    
+    <div class="order-container">
+    
+    <div class="medium-text m-bot-25">Your Orders</div>
+    {% paginate customer.orders by 20 %}
+      {% if customer.orders.size != 0 %}
+        <div class="table-wrap">
+          <table class="full">
+            <thead class = "desktop-order">
+              <tr>
+                <th>{{ 'customer.orders.order_number' | t }}</th>
+                <th>{{ 'customer.orders.date' | t }}</th>
+                <th>{{ 'customer.orders.payment_status' | t }}</th>
+                <th>{{ 'customer.orders.fulfillment_status' | t }}</th>
+                <th>{{ 'customer.orders.total' | t }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for order in customer.orders %}
+                <tr class = "responsive-order">
+                  <th class = "order-title">{{ 'customer.orders.order_number' | t }}</th>
+                  <td class = "order-title">{{ order.name | link_to: order.customer_url }}</td>
+                  <th>{{ 'customer.orders.date' | t  | link_to: order.customer_url }}</th>
+                  <td>{{ order.created_at | date: format: 'month_day_year'  | link_to: order.customer_url }}</td>
+                  <th>{{ 'customer.orders.payment_status' | t  | link_to: order.customer_url }}</th>
+                  <td>{{ order.financial_status_label  | link_to: order.customer_url }}</td>
+                  <th>{{ 'customer.orders.fulfillment_status' | t  | link_to: order.customer_url }}</th>
+                  <td>{{ order.fulfillment_status_label  | link_to: order.customer_url }}</td>
+                  <th>{{ 'customer.orders.total' | t  | link_to: order.customer_url }}</th>
+                  <td>{{ order.total_price | money  | link_to: order.customer_url }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% else %}
+        <p>{{ 'customer.orders.none' | t }}</p>
+      {% endif %}
+      {% if paginate.pages > 1 %}
+        <hr>
+        <div class="pagination">
+          {{ paginate | default_pagination | replace: '&laquo; Previous', '&larr;' | replace: 'Next &raquo;', '&rarr;' }}
+        </div>
+      {% endif %}
+    {% endpaginate %}
+    <div class="grey-block"></div>
+    </div>
+  </div>

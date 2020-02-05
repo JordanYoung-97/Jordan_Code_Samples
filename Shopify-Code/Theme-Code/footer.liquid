@@ -1,0 +1,204 @@
+<!-- /sections/footer.liquid -->
+<style>
+
+</style>
+
+<footer class="site-footer" role="contentinfo"  data-section-id="{{ section.id }}"  data-section-type="footer">
+  <div class="foot-container">
+    <div class="f-collection-container">
+      <div class="svg-container candycar">
+        <div class="svg candy">{{section.settings.svg-candy}}</div>
+        <div class="f-text-container">
+          <div class="f-large-text collecton">CANDYCAR</div>
+          <div class="f-small-text">Tiny but packed<br>with fun!</div>
+        </div><a href="{{section.settings.f-link-1}}" class="_100-button"></a></div>
+      <div class="svg-container">
+        <div class="svg junior">{{section.settings.svg-juniors}}</div>
+        <div class="f-text-container">
+          <div class="f-large-text collecton">JUNIOR</div>
+          <div class="f-small-text">Not too big, Not too small,<br>Just right.</div>
+        </div><a href="{{section.settings.f-link-2}}" class="_100-button"></a>
+      </div>
+      <div class="svg-container american">
+        <div class="svg americana">{{section.settings.svg-americana}}</div>
+        <div class="f-text-container">
+          <div class="f-large-text collecton">AMERICANA</div>
+          <div class="f-small-text">Our biggest line, Something<br>for everyone.</div>
+        </div><a href="{{section.settings.f-link-3}}" class="_100-button"></a>
+      </div>
+      <div class="svg-container stac">
+        <div class="svg stac">{{section.settings.svg-stac}}</div>
+        <div class="f-text-container">
+          <div class="f-large-text collecton">STAC</div>
+          <div class="f-small-text">Modern Architectural<br>building blocks.</div>
+        </div><a href="{{section.settings.f-link-4}}" class="_100-button"></a>
+      </div>
+    </div>
+    <div class="f-container">
+      <div class="f-social-container">
+        <div class="f-email">
+          <div class="f-small-text f-news">Sign up for exclusive news:</div>
+          <div class="f-newsletter">
+          	{% include 'footer-newsletter' %}
+          </div>
+        </div>
+        <div class="f-social">
+          <a href="#" class="f-social-link">
+          <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="youtube" class="svg-social" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path></svg></a>
+          <a href="https://www.facebook.com/candylabtoys/" class="f-social-link">
+          <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" class="svg-social" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg></a>
+          <a href="https://www.instagram.com/candylabtoys/" class="f-social-link"><svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="instagram" class="svg-social" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg></a></div>
+      </div>
+      <div class="f-nav">
+        <div class="f-nav-menu start">
+          <div class="f-large-text bottom" style="margin-bottom: 20px;">{{linklists[section.settings.link-list-1].title}}</div>
+          <div class="f-list-panel">
+          	{% for link in linklists[section.settings.link-list-1].links %}
+          	<a href="{{link.url}}" class="f-small-text middle" style="margin-top: 0px;">{{link.title}}</a>
+          	{% endfor %}
+          </div>
+        </div>
+        <div class="f-nav-menu">
+          <div class="f-large-text bottom" style="margin-bottom: 20px;">{{linklists[section.settings.link-list-2].title}}</div>
+          <div class="f-list-panel">
+            {% for link in linklists[section.settings.link-list-2].links %}
+          	<a href="{{link.url}}" class="f-small-text middle" style="margin-top: 0px;">{{link.title}}</a>
+          	{% endfor %}
+          </div>
+        </div>
+        <div class="f-nav-menu end">
+          <div class="f-large-text bottom" style="margin-bottom: 20px;">{{linklists[section.settings.link-list-3].title}}</div>
+          <div class="f-list-panel">
+            {% for link in linklists[section.settings.link-list-3].links %}
+          	<a href="{{link.url}}" class="f-small-text middle" style="margin-top: 0px;">{{link.title}}</a>
+          	{% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="f-bottom-container redirect">
+      <div class="f-eu-button-container">
+        <div class="f-large-text" style="text-transform: none; color: white;">Want to shop Europe?</div>
+        <a href="https://candylab.toys" class="building-btn" style="color: black;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px 20px;
+    margin: 0px 20px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;"><svg xmlns="http://www.w3.org/2000/svg" style="width: 15px; height: 15px; margin-right: 10px;"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path d="M15,7.3a.28.28,0,0,1-.2.1,13.18,13.18,0,0,0-2.35.23A10.29,10.29,0,0,0,10,8.44l-.18.08a.24.24,0,0,1-.36-.21c0-.3-.06-.59-.09-.89a1.73,1.73,0,0,0-.07-.31.56.56,0,0,0-.53-.38,3.14,3.14,0,0,0-1.66.45c-.43.24-.84.5-1.27.75a8.61,8.61,0,0,1-2,.89l-.1,0c.78,1.84,1.56,3.68,2.34,5.54l-.3.13-.47-1.11L.84,2.8a.28.28,0,0,0-.25-.2A.64.64,0,0,1,0,2.2a.68.68,0,0,1,.31-.79.67.67,0,0,1,.86.18.67.67,0,0,1-.07.85.15.15,0,0,0,0,.13.64.64,0,0,0,.09.21,7.06,7.06,0,0,0,1.57-.52A14.33,14.33,0,0,0,5.09.82,5.93,5.93,0,0,1,6.15.19,1.8,1.8,0,0,1,8.33.64L9,1.37a.18.18,0,0,0,.22,0A7,7,0,0,1,10.8.93,3.13,3.13,0,0,1,12.38,1c.15,0,.2.12.14.26A3.27,3.27,0,0,0,12.77,4,11.72,11.72,0,0,0,14.3,6.29c.21.26.43.52.64.79A.29.29,0,0,1,15,7.3Z"/></g></g></svg> CANDYLAB EU</a>
+      </div>
+      <div class="f-flag-container">
+        <a href="https://candylab.toys"><img class="flag" src="{{'Germany.svg'|asset_url}}"></a>
+        <a href="https://candylab.toys"><img class="flag" src="{{'Poland.svg'|asset_url}}"></a>
+        <a href="https://fr.candylab.toys"><img class="flag" src="{{'France.svg'|asset_url}}"></a>
+        <a href="https://candylab.toys"><img class="flag" src="{{'United_Kingdom.svg'|asset_url}}"></a>
+        <a href="https://candylab.toys"><img class="flag" src="{{'Sweden.svg'|asset_url}}"></a>
+        <a href="https://candylab.toys"><img class="flag" src="{{'es.svg'|asset_url}}"></a>
+        <a href="https://candylab.toys"><img class="flag" src="{{'it.svg'|asset_url}}"></a>
+        <a href="https://candylab.toys"><img class="flag last" src="{{'Netherlands.svg'|asset_url}}"></a>
+      </div>
+    </div>
+    <div class="f-bottom-container">
+      <div class="f-small-text copyright">Terms of Service  |  Privacy Policy  |  © 2019 Candylab Toys, All rights reserved.</div>
+      <div class="f-payment-container">
+        <div class="f-small-text copyright">We Accept:</div>
+        <div class="payment-image"></div>
+        <div class="payment-image"></div>
+        <div class="payment-image"></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+var acc = document.getElementsByClassName("bottom");
+var i;
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+
+
+{% schema %}
+  {
+    "name": "Footer",
+    "settings": [
+		{
+   			"type": "header",
+   			"content": "SVG Settings"
+		},
+		{
+   			"type": "text",
+   			"id": "svg-candy",
+   			"label": "SVG CandyCar Text"
+		},
+		{
+   			"type": "text",
+   			"id": "svg-juniors",
+   			"label": "SVG Juniors Text"
+		},
+		{
+   			"type": "text",
+   			"id": "svg-americana",
+   			"label": "SVG Americana Text"
+		},
+		{
+   			"type": "text",
+   			"id": "svg-stac",
+   			"label": "SVG Stac Text"
+		},
+		{
+   			"type": "header",
+   			"content": "SVG Links"
+		},
+		{
+   			"type": "url",
+   			"id": "f-link-1",
+   			"label": "collection 1 Link"
+		},
+		{
+   			"type": "url",
+   			"id": "f-link-2",
+   			"label": "collection 2 Link"
+		},
+		{
+   			"type": "url",
+   			"id": "f-link-3",
+   			"label": "collection 3 Link"
+		},
+		{
+  			"type": "url",
+  			"id": "f-link-4",
+  			"label": "collection 4 link"
+  		},
+		{
+   			"type": "header",
+   			"content": "Footer Menu Settings"
+		},
+		{
+  			"type": "link_list",
+  			"id": "link-list-1",
+  			"label": "Link list 1"
+  		},
+		{
+  			"type": "link_list",
+  			"id": "link-list-2",
+  			"label": "Link list 2"
+  		},
+		{
+  			"type": "link_list",
+  			"id": "link-list-3",
+  			"label": "Link list 3"
+  		}
+	]
+  }
+{% endschema %}

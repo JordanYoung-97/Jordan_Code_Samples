@@ -1,0 +1,1518 @@
+<style>
+/*building-block */
+  
+.building-container{
+  width: 100vw;
+  padding: 50px;
+}
+.f-b-container{
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 50vw;
+  max-height: 675px;
+  min-height: 350px;
+  margin-bottom: 15px;
+  padding: 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  background-size: cover;
+  background-repeat: no-repeat; 
+}
+  
+.t-container-full{
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flext-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  
+}
+  
+.b-text-small{
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 1em;
+}
+  
+.b-text-large{
+  position: relative;
+  margin-bottom: 20px;
+  font-size: 46px;
+  line-height: 1.25em;
+  font-weight: 600;
+}
+  
+.building-btn{
+  	color: white;
+    background-color: black;
+    padding: 10px 5vw;
+    border-radius: 7px;
+}
+.building-btn:focus {
+  color: white !important; 
+}
+  
+.b-container-d{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding-bottom: 0px;
+}
+  
+.b-container-left{
+  position: relative;
+  width: 50%;
+  height: 35vw;
+  max-height: 450px;
+  min-height: 300px;
+  margin-right: 7.5px;
+  padding: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+}
+  
+.t-container-left{
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  
+}
+  
+.b-container-right{
+  position: relative;
+  width: 50%;
+  height: 35vw;
+  max-height: 450px;
+  min-height: 300px;
+  margin-left: 7.5px;
+  padding: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  
+}
+  
+.t-container-right{
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: end;
+  -ms-flex-align: end;  
+}
+  
+@media (max-width: 767px) {
+  .sc-text-container {
+   margin-left: 0px !important; 
+  }
+  .building-container{
+    padding: 25px;
+  }
+  .b-container-d{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  .f-b-container{
+   height: 550px; 
+  }
+  .b-container-left{
+    width: 100%;
+    margin-right: 0px;
+    margin-bottom: 15px;
+    height: 550px;
+    max-height: 550px;
+  }
+  .b-container-right{
+    width: 100%;
+    margin-left: 0px;
+    height: 550px;
+    max-height: 550px;
+  }
+  .b-text-large{
+    font-size: 42px;
+  }
+    .b-text-small{
+    font-size: 14px;
+  }
+  .building-btn{
+    padding: 10px 5vw;
+  }
+  .page-container{
+   	padding: 20px !important;
+  }
+}
+  
+@media (max-width: 479px) {
+ .f-b-container{
+   background-image: url('{{block.settings.image-full-mobile | img_url: '2048x'}}');
+ }
+ .b-container-left{
+   background-image: url('{{block.settings.image-left-mobile | img_url: '2048x'}}');
+ }
+ .b-container-right{
+   background-image: url('{{block.settings.image-right-mobile | img_url: '2048x'}}');
+ }
+}
+  
+.page-container{
+ padding: 50px; 
+ padding-bottom: 30px; 
+}
+  
+/* single image with text */
+  .sp-small-text p{
+  margin-top: 0px;
+  margin-bottom: 20px;
+}
+  
+/* Customs Section */
+  .customs-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  padding: 50px 0px;
+  margin: 0px 50px;
+  max-width: 1600px;
+}
+
+.customs-image {
+  width: 100%;
+  height: 550px;
+  background-position: 0px 0px;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.customs-content-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 30%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+  
+.customs-content-container.vertical {
+  width: 70%;
+ -webkit-box-orient: vertical;
+ -webkit-box-direction: normal;
+ -webkit-flex-direction: column;
+ -ms-flex-direction: column;
+ flex-direction: column;
+ -webkit-box-pack: start;
+ -webkit-justify-content: flex-start;
+ -ms-flex-pack: start;
+ justify-content: flex-start;
+ -webkit-box-align: start;
+ -webkit-align-items: flex-start;
+ -ms-flex-align: start;
+ align-items: flex-start;
+}
+
+.s-large-text {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1em;
+  margin-bottom: 45px;
+}
+
+.text-content {
+  width: 100%;
+  height: auto;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+  
+@media (min-width: 1700px){
+ .customs-container
+  {
+   margin: auto auto; 
+  }
+}
+  
+@media (max-width: 767px){
+  
+  .customs-container{
+  margin: 0px !important;
+  padding: 0px !important;
+ -webkit-box-orient: vertical;
+ -webkit-box-direction: normal;
+ -webkit-flex-direction: column;
+ -ms-flex-direction: column;
+ flex-direction: column;
+ -webkit-box-pack: start;
+ -webkit-justify-content: flex-start;
+ -ms-flex-pack: start;
+ justify-content: flex-start;
+ -webkit-box-align: start;
+ -webkit-align-items: flex-start;
+ -ms-flex-align: start;
+ align-items: flex-start; 
+  }
+  
+  .customs-content-container.vertical {
+  	width: 100%;
+    order: -1;
+    margin: 0px !important;
+  }
+  
+  .customs-content-container {
+  	width: 100%;
+    padding-bottom: 20px;
+  }
+  
+  .customs-image {
+  	height: 200px;
+  }
+  
+  .s-large-text {
+  font-size: 34px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  }
+  
+  .small-legal-text {
+  margin-top: 10px;
+  }
+}
+  
+/* banner small */
+  .p-content-banner {
+  width: 100vw;
+  height: 50vh;
+  padding: 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+  
+  @media (max-width: 767px){
+    .p-content-banner {
+   		margin-top: 40px;
+      	max-height: 175px;
+      	padding: 20px;
+    }
+  }
+@media (max-width: 991px){  
+  .mc-text-container{
+   margin-left: 0px !important; 
+  }
+}
+  
+/* Large Banner */
+.bl-container {
+  width: 100vw;
+  height: 720px;
+  padding: 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: 767px) {
+  .bl-container{
+   	height: 50vh;
+    padding: 20px;
+  }
+}
+  
+/* small image */
+  .si-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom:45px;
+  max-width: 1366px;
+  margin-left: auto;
+  margin-right: auto;
+}
+  
+  .si-image {
+  width: 400px;
+  height: 400px;
+  margin-right: 50px;
+  background-size: cover;
+  background-repeat: none;
+}
+
+.si-text-container {
+  max-width: 800px;
+}
+  
+@media (max-width: 767px) {
+  .si-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    margin-bottom:20px;
+  }
+  .si-image {
+    width: 100%;
+    max-width: 400px;
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 479px) {
+  .si-image {
+    position: relative;
+    width: 100%;
+    height: 90vw;
+    max-height: 300px;
+    max-width: 300px;
+    min-height: 100px;
+    min-width: 100px;
+    margin-bottom: 20px;
+  }
+}
+  
+/* accordion menu */
+  
+  .f-list-panel-a{
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  overflow: hidden;
+  max-height: 0px;
+  margin-bottom: 10px;
+  -webkit-transition: max-height 300ms ease;
+  transition: max-height 300ms ease;
+  }
+  
+  .a-bottom{
+  margin-bottom: 20px;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
+  text-align: left;
+  letter-spacing: -1px; 
+  }
+  .a-bottom:after {
+    content: '\002B';
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  .a-active:after {
+    content: "\2212";
+  }
+  
+/* color block */
+.c-block {
+ display: -webkit-box;
+ display: -webkit-flex;
+ display: -ms-flexbox;
+ display: flex;
+ width: 100%;
+ height: 500px;
+ margin-top: 50px;
+ margin-bottom: 50px;
+ -webkit-box-pack: center;
+ -webkit-justify-content: center;
+ -ms-flex-pack: center;
+ justify-content: center;
+ -webkit-box-align: center;
+ -webkit-align-items: center;
+ -ms-flex-align: center;
+ align-items: center;
+ background-color: #a04c4c;
+}
+.c-svg-container {
+ width: 70%;
+ height: 70%;
+}
+
+</style>
+
+{% for block in section.blocks %}
+{% if block.type == 'Banner-Small' %}
+<div class="p-content-banner" style="background-image: url('{{block.settings.background-img-bs | img_url: "2048x"}}');background-position: {{block.settings.image-position-bs}};">
+    <div class="p-title" style="color: {{block.settings.text-color-bs}}">{{page.title}}</div>
+</div>
+{% endif%}
+{% if block.type == 'Banner-Large' %}
+<div class="bl-container" style="background-image: url('{{block.settings.background-img-bl | img_url: "2048x"}}');background-position: {{block.settings.image-position-bl}};">
+    <div class="p-title" style="color: {{block.settings.text-color-bl}}">{{page.title}}</div>
+</div>
+{% endif%}
+{%endfor%}
+<div class="page-container">
+{% for block in section.blocks %}
+{% if block.type == 'Masonry-Grid' %}
+<!-- make a mobile image version DOM -->
+<div class="building-container" style="width: 100%; padding: 0px; margin-top:{{block.settings.margin-top-mg}}px; margin-bottom:{{block.settings.margin-bottom-mg}}px;">
+  <div class="f-b-container" style="background-image: url('{{block.settings.image-full-mg | img_url: "2048x"}}');-webkit-justify-content: {{block.settings.text-justify-full-mg}};justify-content: {{block.settings.text-justify-full-mg}};-webkit-align-items: {{block.settings.text-align-full-mg}};align-items: {{block.settings.text-align-full-mg}};background-position: {{block.settings.image-position-full-mg}};">
+    <div class="t-container-full" style="-webkit-align-items: {{block.settings.text-align-full-mg}};align-items: {{block.settings.text-align-full-mg}};color: {{block.settings.text-color-full-mg}};">
+      <div class="b-text-small" style="{%if block.settings.shadow-full-mg %}text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);{% endif %}">{{block.settings.text-small-full-mg}}</div>
+      <div class="b-text-large" style="{%if block.settings.shadow-full-mg %}text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);{% endif %}{% if block.settings.text-align-full-mg == 'flex-end' %}text-align:right; {% else %}text-align:left;{%endif %}">{{block.settings.text-large-full-mg}}</div>
+      {% if block.settings.btn-text-full-mg != "" %}<a class="building-btn" href="{{block.settings.btn-link-full-mg}}">{{block.settings.btn-text-full-mg}}</a>{%endif%}
+    </div>
+  </div>
+  <div class="b-container-d">
+    <div class="b-container-left" style="background-image: url('{{block.settings.image-left-mg | img_url: '2048x'}}');background-position: {{block.settings.image-position-left-mg}};-webkit-justify-content: {{block.settings.text-justify-left-mg}};justify-content: {{block.settings.text-justify-left-mg}};-webkit-align-items: {{block.settings.text-align-left-mg}};align-items: {{block.settings.text-align-left-mg}};">
+      <div class="t-container-left" style="-webkit-align-items: {{block.settings.text-align-left-mg}};align-items: {{block.settings.text-align-left-mg}};color: {{block.settings.text-color-left-mg}};">
+        <div class="b-text-small" style="margin-bottom: 20px;{%if block.settings.shadow-left-mg %}text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);{% endif %}">{{block.settings.text-left-mg}}</div>
+        {% if block.settings.btn-text-left-mg != "" %}<a class="building-btn" href="{{block.settings.btn-link-left-mg}}">{{block.settings.btn-text-left-mg}}</a>{%endif%}
+      </div>
+    </div>
+    <div class ="b-container-right" style="background-image: url('{{block.settings.image-right-mg | img_url: '2048x'}}');background-position: {{block.settings.image-position-right-mg}};-webkit-justify-content: {{block.settings.text-justify-right-mg}};justify-content: {{block.settings.text-justify-right-mg}};-webkit-align-items: {{block.settings.text-align-right-mg}};align-items: {{block.settings.text-align-right-mg}};">
+      <div class="t-container-right" style="-webkit-align-items: {{block.settings.text-align-right-mg}};align-items: {{block.settings.text-align-right-mg}};color: {{block.settings.text-color-right-mg}};">
+        <div class="b-text-small" style="margin-bottom: 20px;{%if block.settings.shadow-right-mg %}text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.25);{% endif %}">{{block.settings.text-right-mg}}</div>
+        {% if block.settings.btn-text-right-mg != "" %}<a class="building-btn" href="{{block.settings.btn-link-right-mg}}">{{block.settings.btn-text-right-mg}}</a>{%endif%}
+      </div>
+    </div>
+  </div>
+</div>
+{% endif%}
+
+{% if block.type == 'Landscape-Grid' %}
+<div class="p-content-container-shop"style="width: 100%; padding: 0px; margin-top:{{block.settings.margin-top-lg}}px; margin-bottom:{{block.settings.margin-bottom-lg}}px;">
+	<div class="sp-tile-container" style="background-image: url('{{block.settings.background-image-lg1 | img_url: "grande"}}'); background-position: {{block.settings.image-position-lg1}}; color: {{block.settings.text-color-lg1}}">
+  		<div class="hover-image" style="background-image: url('{{block.settings.hover-image-lg1 | img_url: "grande"}}'); background-position: {{block.settings.hover-image-position-lg1}};"><a href="{{block.settings.btn-link-lg1}}" class="sp-full-link"></a></div>
+  		<div class="sp-tile-text-container" style="  color: {{section.settings.text-color-lg1}};">
+    		<div class="sp-large-text">{{block.settings.title-text-lg1}}</div>
+    		<div class="sp-small-text">{{block.settings.desc-text-lg1}}</div>
+  		</div>
+	</div>
+  	<div class="sp-tile-container" style="background-image: url('{{block.settings.background-image-lg2 | img_url: "grande"}}'); background-position: {{block.settings.image-position-lg2}}; color: {{block.settings.text-color-lg2}}">
+  		<div class="hover-image" style="background-image: url('{{block.settings.hover-image-lg2 | img_url: "grande"}}'); background-position: {{block.settings.hover-image-position-lg2}};"><a href="{{block.settings.btn-link-lg2}}" class="sp-full-link"></a></div>
+  		<div class="sp-tile-text-container" style="color: {{section.settings.text-color-lg2}};">
+    		<div class="sp-large-text">{{block.settings.title-text-lg2}}</div>
+    		<div class="sp-small-text">{{block.settings.desc-text-lg2}}</div>
+  		</div>
+	</div>
+</div>
+{% endif%}
+{% if block.type == 'Image-Text-Small' %}
+  <div class="si-container" style="margin-top:{{block.settings.margin-top-si}}px; margin-bottom:{{block.settings.margin-bottom-si}}px;">
+    <div class="si-image" style="  background-image: url('{{block.settings.background-image-si | img_url: "grande"}}'); background-position: {{block.settings.image-position-si}}"></div>
+    <div class="si-text-container">
+      {% if block.settings.title-text-si != "" %}
+      <div class="s-large-text" style="margin:0; margin-bottom: 5px;">{{block.settings.title-text-si}}</div>
+      {% endif %}
+      {% if block.settings.pos-text-si != "" %}
+      <div class="sp-small-text" style="margin-bottom: 30px;">{{block.settings.pos-text-si}}</div>
+      {% endif %}
+      <div class="sp-small-text">{{block.settings.rich-text-si}}</div>
+    </div>
+  </div>
+{% endif%}
+{% if block.type == 'Image-Text-Large' %}
+<div class="customs-container" style="border-bottom: {{block.settings.show-border-cs}}; margin: 0px; margin-top:{{block.settings.margin-top-cs}}px; margin-bottom:{{block.settings.margin-bottom-cs}}px;">
+      <div class= "customs-content-container vertical" style="{%if block.settings.img-pos-cs == "img-left" %}margin-right: 50px;{%else%}margin-left: 50px;{%endif%}">
+      	<div class= "customs-image" style="background-image: url('{{ block.settings.image-cs | img_url: '2048x' }}');"></div>
+        <div class= "small-legal-text">{{block.settings.photo-creds-cs}}</div>
+      </div>
+      <div class= "customs-content-container" style="{%if block.settings.img-pos-cs == "img-left" %}order:1;{%else%}order:-1;{%endif%}">
+        <div class= "s-large-text">{{block.settings.title-text-cs}}</div>
+        <div class= "text-content">{{block.settings.description-box-cs}}</div>
+        {% if block.settings.button-text-cs != "" %}<a class="building-btn" href="{{ block.settings.btn_link-cs }}"> {{ block.settings.button-text-cs }} </a>{%endif%}
+      </div>
+</div>
+{% endif%}
+{% if block.type == 'Text-Single' %}
+  <!-- maybe add border top setting -->
+<div class="sc-text-container" style="margin-top:{{block.settings.margin-top-st}}px; margin-bottom:{{block.settings.margin-bottom-st}}px; border-bottom: {{block.settings.show-border-st}};">
+  <div class="sc-title">{{block.settings.title-text-st}}</div>
+  <div class="sc-rich-text"> 
+	{{block.settings.rich-text-st}}
+  </div>
+</div>
+{% endif%}
+{% if block.type == 'Text-Multiple' %}
+<div class="mc-text-container" style="margin-top:{{block.settings.margin-top-tt}}px; margin-bottom:{{block.settings.margin-bottom-tt}}px; border-bottom:{{block.settings.show-border-tt}};">
+	<div class="sc-text-container sc-mobile" style="margin-left: 0px;">
+  		<div class="sc-title">{{block.settings.title-text-tt1}}</div>
+  		<div class="sc-rich-text" style="width: 100%;"> 
+			{{block.settings.rich-text-tt1}}
+  		</div>
+	</div>
+  	<div class="sc-text-container sc-mobile" style="margin-right: 0px;">
+  		<div class="sc-title">{{block.settings.title-text-tt2}}</div>
+  		<div class="sc-rich-text" style="width: 100%;"> 
+			{{block.settings.rich-text-tt2}}
+  		</div>
+	</div>
+  {% if block.settings.text-numberblock-tt == '3' %}
+  <div class="sc-text-container sc-mobile">
+  		<div class="sc-title">{{block.settings.title-text-tt3}}</div>
+  		<div class="sc-rich-text" style="width: 100%;"> 
+			{{block.settings.rich-text-tt3}}
+  		</div>
+	</div>
+  {% endif %}
+</div>
+
+{% endif%}
+
+{% if block.type == 'Color-svg' %}
+ <div class="c-block" style="background-color:{{block.settings.color-cb}}; background-image: url('{{block.settings.image-cb | img_url: 'master' }}');">
+ 	<div class="c-svg-container">{{block.setting.svg-text-cb}}</div>
+ </div>
+{% endif%}
+{% if block.type == 'Accordion-Menu' %}
+<div class="f-nav-menu start" style="margin-left: 100px;margin-right: 100px; border-top: 1px solid gray; border-bottom:{{block.settings.border-bot-am}}px solid gray; margin-top:{{block.settings.margin-top-am}}px; margin-bottom:{{block.settings.margin-bottom-am}}px;">
+ <div class="f-large-text a-bottom" style="font-size: 40px; font-weight: 600; text-transform: none; margin-bottom: 0px; margin-top: 30px;">{{block.settings.link-title-am}}</div>
+   <div class="f-list-panel-a" style="margin-bottom: 30px;">
+       <div class="f-small-text middle" style="font-size: 18px;">{{block.settings.description-box-am}}</div>
+   </div>
+</div>
+{% endif%}
+{% endfor %}
+</div>
+
+<script>
+var acc = document.getElementsByClassName("a-bottom");
+var i;
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("a-active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    } 
+  });
+}
+</script>
+{% schema %}
+  {
+    "name": "Basic Template - 20 Max",
+	"max_blocks": 20,
+	"settings":[
+		{
+          "type":      "header",
+          "content":   "General Template Settings"
+        }],
+	"blocks": [
+	 {
+      "type": "Masonry-Grid",
+      "name": "Masonry Grid",
+      "settings": [
+		{
+    		"type":      "range",
+    		"id":        "margin-top-mg",
+    		"min":       0,
+    		"max":        50,
+    		"step":       5,
+    		"unit":       "px",
+    		"label":     "Spacing Top",
+    		"default":   50
+		},
+		{
+    		"type":      "range",
+    		"id":        "margin-bottom-mg",
+    		"min":       0,
+    		"max":        50,
+    		"step":       5,
+    		"unit":       "px",
+    		"label":     "Spacing Bottom",
+    		"default":   50
+		},
+		{
+          "type": "text",
+          "id": "text-large-full-mg",
+          "label": "Text Full"
+        },
+        {
+          "type": "text",
+          "id": "text-small-full-mg",
+          "label": "Small Text Full"
+        },
+        {
+          "type": "text",
+          "id": "btn-text-full-mg",
+          "label": "Button Text Full"
+        },
+        {
+          "type": "text",
+          "id": "text-left-mg",
+          "label": "Text Left"
+        },
+        {
+          "type": "text",
+          "id": "btn-text-left-mg",
+          "label": "Button Text Left"
+        },
+        {
+          "type": "text",
+          "id": "text-right-mg",
+          "label": "Text Right"
+        },
+        {
+          "type": "text",
+          "id": "btn-text-right-mg",
+          "label": "Button Text Right"
+        },
+   		{
+     	  "type": "url",
+   	 	  "id": "btn-link-full-mg",
+   	 	  "label": "Button Link Full"
+   		},
+   		{
+     	  "type": "url",
+   	 	  "id": "btn-link-left-mg",
+   	 	  "label": "Button Link left"
+   		},
+   		{
+     	  "type": "url",
+   	 	  "id": "btn-link-right-mg",
+   	 	  "label": "Button Link right"
+   		},
+   		{
+     	  "type": "color",
+   	 	  "id": "text-color-full-mg",
+   	 	  "label": "Text Color Full"
+   		},
+   		{
+     	  "type": "color",
+   	 	  "id": "text-color-left-mg",
+   	 	  "label": "Text Color Left"
+   		},
+   		{
+     	  "type": "color",
+   	 	  "id": "text-color-right-mg",
+   	 	  "label": "Text Color Right"
+   		},
+        {
+          "type": "image_picker",
+          "id": "image-full-mg",
+          "label": "Image Full"
+        },
+        {
+          "type": "image_picker",
+          "id": "image-left-mg",
+          "label": "Image Left"
+        },
+        {
+          "type": "image_picker",
+          "id": "image-right-mg",
+          "label": "Image Right"
+        },
+        {
+          "type": "image_picker",
+          "id": "image-full-mobile-mg",
+          "label": "Image Top Mobile"
+        },
+        {
+          "type": "image_picker",
+          "id": "image-left-mobile-mg",
+          "label": "Image Middle Mobile"
+        },
+        {
+          "type": "image_picker",
+          "id": "image-right-mobile-mg",
+          "label": "Image Bottom Mobile"
+        },
+
+   		{
+   			"type": "select",
+			"id": "image-position-full-mg",
+    		"label": "Background Image Position Select Full Tile",
+			"options":
+    			[
+				{ "value": "left top", "label": "left top" },
+				{ "value": "left center", "label": "left center" },
+				{ "value": "left", "label": "left bottom" },
+				{ "value": "right top", "label": "right top" },
+				{ "value": "right center", "label": "right center" },
+				{ "value": "right bottom", "label": "right bottom" },
+				{ "value": "center top", "label": "center top" },
+				{ "value": "center center", "label": "center center" },
+				{ "value": "center bottom", "label": "center bottom" }			
+				]
+   		},
+   		{
+   			"type": "select",
+			"id": "image-position-left-mg",
+    		"label": "Background Image Position Select Left Tile",
+			"options":
+    			[
+				{ "value": "left top", "label": "left top" },
+				{ "value": "left center", "label": "left center" },
+				{ "value": "left", "label": "left bottom" },
+				{ "value": "right top", "label": "right top" },
+				{ "value": "right center", "label": "right center" },
+				{ "value": "right bottom", "label": "right bottom" },
+				{ "value": "center top", "label": "center top" },
+				{ "value": "center center", "label": "center center" },
+				{ "value": "center bottom", "label": "center bottom" }			
+				]
+   		},
+   		{
+   			"type": "select",
+			"id": "image-position-right-mg",
+    		"label": "Background Image Position Select Right Tile",
+			"options":
+    			[
+				{ "value": "left top", "label": "left top" },
+				{ "value": "left center", "label": "left center" },
+				{ "value": "left", "label": "left bottom" },
+				{ "value": "right top", "label": "right top" },
+				{ "value": "right center", "label": "right center" },
+				{ "value": "right bottom", "label": "right bottom" },
+				{ "value": "center top", "label": "center top" },
+				{ "value": "center center", "label": "center center" },
+				{ "value": "center bottom", "label": "center bottom" }			
+				]
+   		},
+   		{
+	 		"type": "checkbox",
+	 		"id": "shadow-full-mg",
+	 		"default": false,
+	 		"label": "Enable Text Shadow Full"
+   		},
+   		{
+	 		"type": "checkbox",
+	 		"id": "shadow-left-mg",
+	 		"default": false,
+	 		"label": "Enable Text Left Shadow Tile"
+   		},
+   		{
+	 		"type": "checkbox",
+	 		"id": "shadow-right-mg",
+	 		"default": false,
+	 		"label": "Enable Text Right Shadow Tile"
+   		},
+   		{
+   			"type": "select",
+			"id": "text-align-full-mg",
+    		"label": "Text Position Select Full - Horizontal",
+			"options":
+    			[
+				{ "value": "flex-start", "label": "left" },
+				{ "value": "center", "label": "center" },
+				{ "value": "flex-end", "label": "right" }			
+				]
+   		},
+   		{
+   			"type": "select",
+			"id": "text-justify-full-mg",
+    		"label": "Text Position Select Full - Vertical",
+			"options":
+    			[
+				{ "value": "flex-start", "label": "top" },
+				{ "value": "center", "label": "center" },
+				{ "value": "flex-end", "label": "bottom" }			
+				]
+   		},
+   		{
+   			"type": "select",
+			"id": "text-align-left-mg",
+    		"label": "Text Position Select Left Tile - Horizontal",
+			"options":
+    			[
+				{ "value": "flex-start", "label": "left" },
+				{ "value": "center", "label": "center" },
+				{ "value": "flex-end", "label": "right" }			
+				]
+   		},
+   		{
+   			"type": "select",
+			"id": "text-justify-left-mg",
+    		"label": "Text Position Select Left Tile - Vertical",
+			"options":
+    			[
+				{ "value": "flex-start", "label": "top" },
+				{ "value": "center", "label": "center" },
+				{ "value": "flex-end", "label": "bottom" }			
+				]
+   		},
+   		{
+   			"type": "select",
+			"id": "text-align-right-mg",
+    		"label": "Text Position Select Right Tile - Horizontal",
+			"options":
+    			[
+				{ "value": "flex-start", "label": "left" },
+				{ "value": "center", "label": "center" },
+				{ "value": "flex-end", "label": "right" }			
+				]
+   		},
+   		{
+   			"type": "select",
+			"id": "text-justify-right-mg",
+    		"label": "Text Position Select Right Tile - Vertical",
+			"options":
+    			[
+				{ "value": "flex-start", "label": "top" },
+				{ "value": "center", "label": "center" },
+				{ "value": "flex-end", "label": "bottom" }			
+				]
+   		}
+	  ]
+	 },
+     {
+       "type": "Landscape-Grid",
+       "name": "Landscape Grid",
+       "settings": [
+		{
+    		"type":      "range",
+    		"id":        "margin-top-lg",
+    		"min":       0,
+    		"max":        50,
+    		"step":       5,
+    		"unit":       "px",
+    		"label":     "Spacing Top",
+    		"default":   50
+		},
+		{
+    		"type":      "range",
+    		"id":        "margin-bottom-lg",
+    		"min":       0,
+    		"max":        50,
+    		"step":       5,
+    		"unit":       "px",
+    		"label":     "Spacing Bottom",
+    		"default":   50
+		},
+		{
+     	"type": "image_picker",
+     	"id": "background-image-lg2",
+    	"label": "Background Image"
+  		},
+   	 	{
+     	"type": "image_picker",
+     	"id": "hover-image-lg2",
+    	"label": "Hover Image"
+  	 	},
+	 	{
+   	 	"type": "select",
+		"id": "image-position-lg2",
+ 		"label": "Background Image Position Select",
+		"options":
+   			[
+			  { "value": "left top", "label": "left top" },
+			  { "value": "left center", "label": "left center" },
+			  { "value": "left", "label": "left bottom" },
+			  { "value": "right top", "label": "right top" },
+			  { "value": "right center", "label": "right center" },
+			  { "value": "right bottom", "label": "right bottom" },
+			  { "value": "center top", "label": "center top" },
+			  { "value": "center center", "label": "center center" },
+			  { "value": "center bottom", "label": "center bottom" }			
+			]
+     	},
+	 	{
+   		"type": "select",
+		"id": "hover-image-position-lg2",
+   		"label": "Hover Background Image Position Select",
+		"options":
+   			[
+			  { "value": "left top", "label": "left top" },
+			  { "value": "left center", "label": "left center" },
+			  { "value": "left", "label": "left bottom" },
+			  { "value": "right top", "label": "right top" },
+			  { "value": "right center", "label": "right center" },
+			  { "value": "right bottom", "label": "right bottom" },
+			  { "value": "center top", "label": "center top" },
+			  { "value": "center center", "label": "center center" },
+			  { "value": "center bottom", "label": "center bottom" }			
+			]
+     	},
+   		{
+    	 "type": "text",
+    	 "id": "title-text-lg2",
+    	 "label": "Collection Name Text"
+   		},
+   		{
+     	 "type": "text",
+     	 "id": "desc-text-lg2",
+     	 "label": "Collection Description Text"
+   		},
+		{
+     	 "type": "url",
+   		 "id": "btn-link-lg2",
+   		 "label": "Button Link"
+   		},
+		{
+   		 "type": "color",
+   		 "id": "text-color-lg2",
+   		 "label": "Text color",
+   		 "default": "#ffffff"
+		},
+        {
+     	"type": "image_picker",
+     	"id": "background-image-lg1",
+    	"label": "Background Image"
+  		},
+   	 	{
+     	"type": "image_picker",
+     	"id": "hover-image-lg1",
+    	"label": "Hover Image"
+  	 	},
+	 	{
+   	 	"type": "select",
+		"id": "image-position-lg1",
+ 		"label": "Background Image Position Select",
+		"options":
+   			[
+			  { "value": "left top", "label": "left top" },
+			  { "value": "left center", "label": "left center" },
+			  { "value": "left", "label": "left bottom" },
+			  { "value": "right top", "label": "right top" },
+			  { "value": "right center", "label": "right center" },
+			  { "value": "right bottom", "label": "right bottom" },
+			  { "value": "center top", "label": "center top" },
+			  { "value": "center center", "label": "center center" },
+			  { "value": "center bottom", "label": "center bottom" }			
+			]
+     	},
+	 	{
+   		"type": "select",
+		"id": "hover-image-position-lg1",
+   		"label": "Hover Background Image Position Select",
+		"options":
+   			[
+			  { "value": "left top", "label": "left top" },
+			  { "value": "left center", "label": "left center" },
+			  { "value": "left", "label": "left bottom" },
+			  { "value": "right top", "label": "right top" },
+			  { "value": "right center", "label": "right center" },
+			  { "value": "right bottom", "label": "right bottom" },
+			  { "value": "center top", "label": "center top" },
+			  { "value": "center center", "label": "center center" },
+			  { "value": "center bottom", "label": "center bottom" }			
+			]
+     	},
+   		{
+    	 "type": "text",
+    	 "id": "title-text-lg1",
+    	 "label": "Collection Name Text"
+   		},
+   		{
+     	 "type": "text",
+     	 "id": "desc-text-lg1",
+     	 "label": "Collection Description Text"
+   		},
+		{
+     	 "type": "url",
+   		 "id": "btn-link-lg1",
+   		 "label": "Button Link"
+   		},
+		{
+   		 "type": "color",
+   		 "id": "text-color-lg1",
+   		 "label": "Text color",
+   		 "default": "#ffffff"
+		}
+
+	  ]
+	 },
+     {
+       "type": "Image-Text-Small",
+       "name": "Image With Text Small",
+       "settings": [
+		{
+    		"type":      "range",
+    		"id":        "margin-top-si",
+    		"min":       0,
+    		"max":        50,
+    		"step":       5,
+    		"unit":       "px",
+    		"label":     "Spacing Top",
+    		"default":   50
+		},
+		{
+    		"type":      "range",
+    		"id":        "margin-bottom-si",
+    		"min":       0,
+    		"max":        50,
+    		"step":       5,
+    		"unit":       "px",
+    		"label":     "Spacing Bottom",
+    		"default":   50
+		},
+		{
+     	"type": "image_picker",
+     	"id": "background-image-si",
+    	"label": "Image"
+  	 	},
+		{
+   	 	"type": "select",
+		"id": "image-position-si",
+ 		"label": "Background Image Position Select",
+		"options":
+   			[
+			  { "value": "left top", "label": "left top" },
+			  { "value": "left center", "label": "left center" },
+			  { "value": "left", "label": "left bottom" },
+			  { "value": "right top", "label": "right top" },
+			  { "value": "right center", "label": "right center" },
+			  { "value": "right bottom", "label": "right bottom" },
+			  { "value": "center top", "label": "center top" },
+			  { "value": "center center", "label": "center center" },
+			  { "value": "center bottom", "label": "center bottom" }			
+			]
+     	},
+		{
+    	 "type": "text",
+    	 "id": "title-text-si",
+    	 "label": "Title Name Text"
+   		},
+		{
+    	 "type": "text",
+    	 "id": "pos-text-si",
+    	 "label": "Title Position Text"
+   		},
+		{
+   		"type": "richtext",
+   		"id": "rich-text-si",
+   		"label": "Rich Text (Body Text)",
+   		"default": "<p>Default <em>richtext</em> <a href=\"https://example.com/\">content</a></p>"
+		}
+	  ]
+	 },
+     {
+       "type": "Image-Text-Large",
+       "name": "Image With Text Large",
+       "settings": [
+		{
+    		"type":      "range",
+    		"id":        "margin-top-cs",
+    		"min":       0,
+    		"max":        50,
+    		"step":       5,
+    		"unit":       "px",
+    		"label":     "Spacing Top",
+    		"default":   50
+		},
+		{
+    		"type":      "range",
+    		"id":        "margin-bottom-cs",
+    		"min":       0,
+    		"max":        50,
+    		"step":       5,
+    		"unit":       "px",
+    		"label":     "Spacing Bottom",
+    		"default":   50
+		},
+		{
+   		"type": "select",
+		"id": "img-pos-cs",
+    	"label": "Image Order",
+		"options":
+    		[
+			{ "value": "img-left", "label": "left" },
+			{ "value": "img-right", "label": " right " }		
+			]
+   		},
+        {
+          "type": "image_picker",
+          "id": "image-cs",
+          "label": "Image"
+        },
+		{
+		  "id": "title-text-cs",
+		  "type" : "text",
+		  "label" : "Title Text",
+		  "default" : "Custom Title"
+		},
+		{
+        "id": "description-box-cs",
+        "type": "textarea",
+        "label": "Description",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Posuere morbi leo urna molestie at elementum eu. Accumsan in nisl nisi scelerisque. Fringilla ut morbi tincidunt augue. Eget mi proin sed libero enim sed faucibus turpis. Ac odio tempor orci dapibus. Scelerisque felis imperdiet proin fermentum leo vel orci. Semper feugiat nibh sed pulvinar proin. Morbi leo urna molestie at. Quis viverra nibh cras pulvinar mattis. Id porta nibh venenatis cras sed felis eget velit. Sit amet facilisis magna etiam tempor."
+        },
+		{
+		  "id": "button-text-cs",
+		  "type" : "text",
+		  "label" : "Button Text",
+		  "default" : "Learn More"
+		},
+		{
+          "type": "url",
+          "id": "btn_link-cs",
+          "label": "Button URL"
+        },
+      	{
+		  "id": "photo-creds-cs",
+		  "type" : "text",
+		  "label" : "Photo Credit Text",
+		  "default" : "Candylab Toys"
+		},
+   		{
+   		"type": "select",
+		"id": "show-border-cs",
+    	"label": "Bottom Border Settings",
+		"options":
+    		[
+			{ "value": "2px solid grey", "label": "Show Bottom Border" },
+			{ "value": "0px solid grey", "label": "No Bottom Border" }		
+			]
+   		}
+	  ]
+	 },
+     {
+       "type": "Text-Single",
+       "name": "Text Single Column",
+       "settings": [
+		{
+    		"type":      "range",
+    		"id":        "margin-top-st",
+    		"min":       0,
+    		"max":        50,
+    		"step":       5,
+    		"unit":       "px",
+    		"label":     "Spacing Top",
+    		"default":   50
+		},
+		{
+    		"type":      "range",
+    		"id":        "margin-bottom-st",
+    		"min":       0,
+    		"max":        50,
+    		"step":       5,
+    		"unit":       "px",
+    		"label":     "Spacing Bottom",
+    		"default":   50
+		},
+		{
+   		"type": "richtext",
+   		"id": "rich-text-st",
+   		"label": "Rich Text (Body Text)",
+   		"default": "<p>Default <em>richtext</em> <a href=\"https://example.com/\">content</a></p>"
+		},
+		{
+   		"type": "text",
+   		"id": "title-text-st",
+   		"default": "Text Title",
+   		"label": "Title Text"
+		},
+   		{
+   		"type": "select",
+		"id": "show-border-st",
+    	"label": "Bottom Border Settings",
+		"options":
+    		[
+			{ "value": "2px solid grey", "label": "Show Bottom Border" },
+			{ "value": "0px solid grey", "label": "No Bottom Border" }		
+			]
+   		}
+	  ]
+	 },
+     {
+       "type": "Text-Multiple",
+       "name": "Text Multiple Column",
+       "settings": [
+		{
+    		"type":      "range",
+    		"id":        "margin-top-tt",
+    		"min":       0,
+    		"max":        50,
+    		"step":       5,
+    		"unit":       "px",
+    		"label":     "Spacing Top",
+    		"default":   50
+		},
+		{
+    		"type":      "range",
+    		"id":        "margin-bottom-tt",
+    		"min":       0,
+    		"max":        50,
+    		"step":       5,
+    		"unit":       "px",
+    		"label":     "Spacing Bottom",
+    		"default":   50
+		},
+		{
+   		"type": "select",
+		"id": "text-numberblock-tt",
+    	"label": "Number of Text Columns (2 or 3)",
+		"options":
+    		[
+			{ "value": "3", "label": "3" },
+			{ "value": "2", "label": "2" }		
+			]
+   		},
+		{
+   		"type": "select",
+		"id": "show-border-tt",
+    	"label": "Bottom Border Settings",
+		"options":
+    		[
+			{ "value": "2px solid grey", "label": "Show Bottom Border" },
+			{ "value": "0px solid grey", "label": "No Bottom Border" }		
+			]
+   		},
+		{
+   		"type": "textarea",
+   		"id": "rich-text-tt1",
+   		"label": "Rich Text (Body Text 1)",
+   		"default": "<p>Default <em>richtext</em> <a href=\"https://example.com/\">content</a></p>"
+		},
+		{
+   		"type": "text",
+   		"id": "title-text-tt1",
+   		"default": "Text Title 1",
+   		"label": "Title Text"
+		},
+		{
+   		"type": "textarea",
+   		"id": "rich-text-tt2",
+   		"label": "Rich Text (Body Text 2)",
+   		"default": "<p>Default <em>richtext</em> <a href=\"https://example.com/\">content</a></p>"
+		},
+		{
+   		"type": "text",
+   		"id": "title-text-tt2",
+   		"default": "Text Title 2",
+   		"label": "Title Text"
+		},
+		{
+   		"type": "textarea",
+   		"id": "rich-text-tt3",
+   		"label": "Rich Text (Body Text 3)",
+   		"default": "<p>Default <em>richtext</em> <a href=\"https://example.com/\">content</a></p>"
+		},
+		{
+   		"type": "text",
+   		"id": "title-text-tt3",
+   		"default": "Text Title 3",
+   		"label": "Title Text"
+		}
+	  ]
+	 },
+     {
+       "type": "Banner-Small",
+       "name": "Banner Small",
+       "settings": [
+		{
+   			"type": "image_picker",
+   			"id": "background-img-bs",
+   			"label": "Background Image"
+		},
+   		{
+   			"type": "select",
+			"id": "image-position-bs",
+    		"label": "Background Image Position Select",
+			"options":
+    			[
+				{ "value": "left top", "label": "left top" },
+				{ "value": "left center", "label": "left center" },
+				{ "value": "left", "label": "left bottom" },
+				{ "value": "right top", "label": "right top" },
+				{ "value": "right center", "label": "right center" },
+				{ "value": "right bottom", "label": "right bottom" },
+				{ "value": "center top", "label": "center top" },
+				{ "value": "center center", "label": "center center" },
+				{ "value": "center bottom", "label": "center bottom" }			
+				]
+   		},
+		{
+   			"type": "color",
+   			"id": "text-color-bs",
+   			"label": "Title text color",
+   			"default": "#ffffff"
+		}
+	  ]
+	 },
+     {
+       "type": "Banner-Large",
+       "name": "Banner Large",
+       "settings": [
+		{
+   			"type": "image_picker",
+   			"id": "background-img-bl",
+   			"label": "Background Image"
+		},
+   		{
+   			"type": "select",
+			"id": "image-position-bl",
+    		"label": "Background Image Position Select",
+			"options":
+    			[
+				{ "value": "left top", "label": "left top" },
+				{ "value": "left center", "label": "left center" },
+				{ "value": "left", "label": "left bottom" },
+				{ "value": "right top", "label": "right top" },
+				{ "value": "right center", "label": "right center" },
+				{ "value": "right bottom", "label": "right bottom" },
+				{ "value": "center top", "label": "center top" },
+				{ "value": "center center", "label": "center center" },
+				{ "value": "center bottom", "label": "center bottom" }			
+				]
+   		},
+		{
+   			"type": "color",
+   			"id": "text-color-bl",
+   			"label": "Title text color",
+   			"default": "#ffffff"
+		}
+	  ]
+	 },
+     {
+       "type": "Color-Svg",
+       "name": "Color Block",
+       "settings": [
+		{
+   		"type": "text",
+   		"id": "svg-text-cb",
+   		"label": "SVG Text"
+		},
+		{
+			"type": "image_picker",
+   			"id": "image-b",
+   			"label": "Image"
+		},
+		{
+   			"type": "color",
+   			"id": "color-cb",
+   			"label": "Background Color",
+   			"default": "#000000"
+		}
+	  ]
+	 },
+     {
+       "type": "Accordion-Menu",
+       "name": "Accordion Menu",
+       "settings": [
+		{
+    		"type":      "range",
+    		"id":        "margin-top-am",
+    		"min":       0,
+    		"max":        100,
+    		"step":       5,
+    		"unit":       "px",
+    		"label":     "Spacing Top",
+    		"default":   0
+		},
+		{
+    		"type":      "range",
+    		"id":        "margin-bottom-am",
+    		"min":       0,
+    		"max":        100,
+    		"step":       5,
+    		"unit":       "px",
+    		"label":     "Spacing Top",
+    		"default":   0
+		},
+		{
+   		"type": "text",
+   		"id": "link-title-am",
+   		"default": "Accordion Menu Title",
+   		"label": "Title Text"
+		},
+		{
+        "id": "description-box-am",
+        "type": "textarea",
+        "label": "Description",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mauris pellentesque pulvinar pellentesque habitant morbi tristique senectus. Posuere morbi leo urna molestie at elementum eu. Accumsan in nisl nisi scelerisque. Fringilla ut morbi tincidunt augue. Eget mi proin sed libero enim sed faucibus turpis. Ac odio tempor orci dapibus. Scelerisque felis imperdiet proin fermentum leo vel orci. Semper feugiat nibh sed pulvinar proin. Morbi leo urna molestie at. Quis viverra nibh cras pulvinar mattis. Id porta nibh venenatis cras sed felis eget velit. Sit amet facilisis magna etiam tempor."
+        },
+		{
+   			"type": "select",
+			"id": "border-bot-am",
+    		"label": "Enable Border Bottom",
+			"options":
+    			[
+				{ "value": "0", "label": "Disable" },
+				{ "value": "1", "label": "Enable" }
+				]
+		}
+	  ]
+	 }
+	]
+}
+{% endschema %}
+
+
